@@ -236,7 +236,9 @@ textElements.forEach((element) => {
   })
   element.innerHTML = characterHTML
 })
-
+console.log("Emre");  
+  console.log(window.location.search);  
+  console.log(window.location.href);  
 // kick off the render loop
 window.initBurst()
 render()
