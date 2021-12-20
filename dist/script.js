@@ -181,9 +181,7 @@ render = () => {
 // cycle through button states when clicked
 clickButton = () => {
   
-  console.log("Emre");  
-  console.log(window.location.search);  
-  console.log(window.location.href);  
+  
 
 
   if (!disabled) {
