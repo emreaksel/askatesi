@@ -1,4 +1,4 @@
- let track_index = 0;
+﻿ let track_index = 0;
         let isPlaying = false;
         var next_type = 1; //0 karışık, 1 sıra ile, 2 tekrarlı
         let updateTimer;
