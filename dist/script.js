@@ -52,7 +52,7 @@
               track_list.push({ name: "Meded", 
                                artist: "Gavs", 
                                image: "http://kardelendergisi.com/atesiask/images/yeni77.jpg", 
-                               path: "https://www.mediafire.com/file/wame8e6p9gwuqu6/mededya.mp3" });
+                               path: url });
               curr_track.src = track_list[track_list.length-1].path; 
               curr_track.load();
           } else {
