@@ -46,7 +46,7 @@
           let parselle=window.location.href;//https://www.mediafire.com/file/wame8e6p9gwuqu6/mededya
           if (parselle.includes("?")) {
               console.log("persel: " + "true");
-            parselle=parselle.replace('https://emreaksel.github.io/askatesi/?', '');
+            parselle=parselle.replace('https://atesiask.netlify.app/?', '');
             let url="https://www.mediafire.com/"+parselle+".mp3";
               console.log("parselli url: " + url);
               track_list.push({ name: "Meded", 
