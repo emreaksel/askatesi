@@ -169,6 +169,7 @@
         headers: {
         "accept": "application/json",
         "Access-Control-Allow-Origin": "*"},
+        xhrFields: {withCredentials: true},
         dataType: "",
         success: function(data) {
          console.log(data.responseText);
