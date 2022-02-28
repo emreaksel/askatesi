@@ -81,10 +81,10 @@
                    } else {
                      counter++;
                    }
-                        var url = $(this).attr("data-path");
-                        var ad = $(this).attr("data-title");
-                        var ses = $(this).attr("data-duration");
-                        track_list.push({ name: ad.text(), artist: ses.text(), image: "http://kardelendergisi.com/atesiask/images/yeni77.jpg", path: url.text() });
+                        const url = $(this).attr("data-path");
+                        const ad = $(this).attr("data-title");
+                        const ses = $(this).attr("data-duration");
+                        track_list.push({ name: ad, artist: ses, image: "http://kardelendergisi.com/atesiask/images/yeni77.jpg", path: url });
                         console.log("url: "+url+" ad: "+ad+" ses: "+ses);
                         
                  });
