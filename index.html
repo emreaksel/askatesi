@@ -166,7 +166,7 @@
               type: "GET",
               dataType: "xml",
               success: function(xml) {
-               console.log("ajax, successs");
+               console.log("ajax, başarılı");
                 
                 var counter = 1;
                 $(xml).find('ul').find('li').each(function(){
@@ -176,7 +176,7 @@
                    } else {
                      counter++;
                    }
-                        var name = $(this).attr("data-path").text();
+                        var name = $(this).attr("data-path");
                         console.log("Log: "+name);
                  });
                 
