@@ -159,6 +159,22 @@
 <!-- SCRIPTS -->
     <script  src="./script.js"></script>
     <script  src="./scriptparticles.js"></script>
+    <script>
+        $(document).ready(function() {
 
+    baseUrl = "http://www.mashable.com";
+    $.ajax({
+        url: baseUrl,
+        type: "get",
+        dataType: "",
+        success: function(data) {
+         console.log(data.responseText);
+        },
+        error: function(status) {
+         console.log("request error:"+url);
+        }
+    });
+});
+  </script>
 </body>
 </html>
