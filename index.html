@@ -161,26 +161,19 @@
     <script  src="./scriptparticles.js"></script>
     <script>
         $(document).ready(function() {
-
-    baseUrl = "http://kardelendergisi.com/atesiask/baska.xml";
-    $.ajax({
-        url: baseUrl,
-        type: "get",
-        headers: {
-        "accept": "application/json",
-        "Access-Control-Allow-Origin": "*",
-        "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept"},
-        xhrFields: {withCredentials: true},
-        crossDomain: true,
-        dataType: "jsonp",
-        success: function(data) {
-         console.log(data.responseText);
-        },
-        error: function(status) {
-         console.log("request error:"+baseUrl);
-        }
-    });
-});
+          $.ajax({
+              url: "/hepsi.xml",
+              type: "GET",
+              dataType: "xml",
+              cache: false,
+              success: function(data) {
+               console.log(data.responseText);
+              },
+              error: function(status) {
+               console.log("request error:"+baseUrl);
+              }
+          });
+        });
       
   </script>
 </body>
