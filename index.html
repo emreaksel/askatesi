@@ -166,11 +166,16 @@
               type: "GET",
               dataType: "xml",
               cache: false,
-              success: function(data) {
-               console.log(data.responseText);
+              success: function(xml) {
+               
+                $(xml).find('ul').each(function(){
+                        var name = $(this).text();
+                        console.log(name);
+                 });
+                
               },
               error: function(status) {
-               console.log("request error:"+baseUrl);
+               console.log("request error:");
               }
           });
         });
