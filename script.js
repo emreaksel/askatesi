@@ -59,6 +59,7 @@
               console.log("persel: " + "false");
               curr_track.src = track_list[track_list.length-1].path; 
               curr_track.load();
+              console.log("parselli url: " + track_list[track_list.length-1].path);
           }
             
         }
