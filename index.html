@@ -166,8 +166,8 @@
               type: "GET",
               dataType: "xml",
               success: function(xml) {
-               
-                $(xml).find('ul').each(function(){
+               console.log("ajax, successs");
+                $(xml).find('ul').find('li').each(function(){
                         var name = $(this).text();
                         console.log(name);
                  });
