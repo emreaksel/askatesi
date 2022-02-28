@@ -121,7 +121,7 @@
               <div class="random_btn text-center" id="random"><span class="glyphicon glyphicon-random" aria-hidden="true"></span></div>
             </div>
             <div class="col-xs-2">
-              <div class="prev_btn text-center" id="btnPrev" data-action='prev'><span class="glyphicon glyphicon-backward" aria-hidden="true"></span></div>
+              <div class="prev_btn text-center" onclick="prevTrack()"><span class="glyphicon glyphicon-backward" aria-hidden="true"></span></div>
             </div>
             <div class="col-xs-3">
               <div class="play_btn text-center" onclick="playpauseTrack()">
@@ -129,7 +129,7 @@
               </div>
             </div>
             <div class="col-xs-2">
-              <div class="next_btn text-center" id="btnNext" data-action='next'><span class="glyphicon glyphicon-forward" aria-hidden="true"></span></div>
+              <div class="next_btn text-center" onclick="nextTrack()"><span class="glyphicon glyphicon-forward" aria-hidden="true"></span></div>
             </div>
             <div class="col-xs-2">
               <div class="repeat_btn text-center" id="repeat"><span class="glyphicon glyphicon-retweet" aria-hidden="true"></span></div>
@@ -175,7 +175,11 @@
                    } else {
                      counter++;
                    }
-                        var name = $(this).attr("data-path");
+                        var url = $(this).attr("data-path");
+                        var ad = $(this).attr("data-title");
+                        var ses = $(this).attr("data-duration");
+                        track_list.push({ name: ad, artist: ses, image: "http://kardelendergisi.com/atesiask/images/yeni77.jpg", path: url });
+
                         console.log("Log: "+name);
                  });
                 
