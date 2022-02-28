@@ -168,7 +168,8 @@
         type: "get",
         headers: {
         "accept": "application/json",
-        "Access-Control-Allow-Origin": "*"},
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept"},
         xhrFields: {withCredentials: true},
         dataType: "",
         success: function(data) {
@@ -180,26 +181,6 @@
     });
 });
       
-      
-      fetch('https://kardelendergisi.com/', {
-    method: 'POST',
-    mode: 'no-cors',
-    credentials: 'same-origin',
-    headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({
-        objectClass: 'course',
-        crud: '2'
-    })
-}).then(function (response) {
-    console.log(response);
-    return response.json();
-
-}).catch(function (err) {
-    console.log(err)
-});
   </script>
 </body>
 </html>
