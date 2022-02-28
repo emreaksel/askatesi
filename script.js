@@ -85,8 +85,6 @@
                         var ad = $(this).attr("data-title");
                         var ses = $(this).attr("data-duration");
                         track_list.push({ name: ad, artist: ses, image: "http://kardelendergisi.com/atesiask/images/yeni77.jpg", path: url });
-
-                        console.log("Logg: "+track_list[track_list.lenght-1].artist);
                         console.log("url: "+url+" ad: "+ad+" ses: "+ses);
                         
                  });
