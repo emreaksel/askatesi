@@ -166,7 +166,9 @@
     $.ajax({
         url: baseUrl,
         type: "get",
-        headers: {'Access-Control-Allow-Origin': '*'},
+        headers: {
+        "accept": "application/json",
+        "Access-Control-Allow-Origin": "*"},
         dataType: "",
         success: function(data) {
          console.log(data.responseText);
