@@ -166,6 +166,7 @@
     $.ajax({
         url: baseUrl,
         type: "get",
+        crossDomain: true,
         dataType: "",
         success: function(data) {
          console.log(data.responseText);
