@@ -57,9 +57,43 @@
               curr_track.load();
           } else {
               console.log("persel: " + "false");
+              curr_track.src = track_list[track_list.length-1].path; 
+              curr_track.load();
           }
             
         }
         //----------------------
+
+        $(document).ready(function() {
+          $.ajax({
+              url: "/hepsi.xml",
+              type: "GET",
+              dataType: "xml",
+              success: function(xml) {
+               console.log("ajax, başarılı");
+                
+                var counter = 1;
+                $(xml).find('ul').find('li').each(function(){
+                  // Only do it for the first 5 elements of .kltat class
+                   if (counter==5) {
+                     return false;
+                   } else {
+                     counter++;
+                   }
+                        var url = $(this).attr("data-path");
+                        var ad = $(this).attr("data-title");
+                        var ses = $(this).attr("data-duration");
+                        track_list.push({ name: ad, artist: ses, image: "http://kardelendergisi.com/atesiask/images/yeni77.jpg", path: url });
+
+                        console.log("Logg: "+track_list[track_list.lenght-1].artist);
+                 });
+                
+              },
+              error: function(status) {
+               console.log("request error:");
+              }
+          });
+        });
+//----------------------
 console.log("adresin yeri: " + window.location.href);
 ilk_parcayi_ayarlar();
