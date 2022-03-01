@@ -121,7 +121,10 @@
                  });
                 curr_track.src = track_list[track_list.length-1].path; 
                 curr_track.load();
-                      console.log("liste uzunluğu: "+track_list.length);
+                      
+                      var today = new Date();
+            var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+                      console.log("Log: "time+" --> "+"liste uzunluğu: "+track_list.length);
               },
               error: function(status) {
                console.log("request error:");
