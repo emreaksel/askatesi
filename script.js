@@ -121,7 +121,7 @@
                  });
                 curr_track.src = track_list[track_list.length-1].path; 
                 curr_track.load();
-                      console.log("path: "+track_list[track_list.length-1].path);
+                      console.log("liste uzunluğu: "+track_list.length);
               },
               error: function(status) {
                console.log("request error:");
