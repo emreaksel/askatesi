@@ -102,10 +102,10 @@
                                             // Give it the desired classes & attributes:
                                             //a.classList.add('ui-all');
                                             //a.tabIndex = -1;
-                                            b1.style.color = 'white';
-                                            b2.style.color = 'white';
-                                            b1.style.backgroundColor = 'black';
-                                            b2.style.backgroundColor = 'black';
+                                            //b1.style.color = 'white';
+                                            //b2.style.color = 'white';
+                                            //b1.style.backgroundColor = 'black';
+                                            //b2.style.backgroundColor = 'black';
 
                                             b1.innerText = $(this).attr("data-title"); 
                                             b2.innerText = $(this).attr("data-duration");
