@@ -115,7 +115,7 @@
                                             // Now add the <a> to the <li>, and add the <li> to the <ul>
                                             li.appendChild(b1);
                                             li.appendChild(b2);
-                                            li.style.width = '100%';
+                                            li.style.width = '275px';
                                             myList.appendChild(li);
                         
                                 track_list.push({ name: $(this).attr("data-title"), artist: $(this).attr("data-duration"), image: "http://kardelendergisi.com/atesiask/images/yeni77.jpg", path: $(this).attr("data-path") });
