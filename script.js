@@ -64,22 +64,23 @@
         }
         //----------------------
 
-       
+       var birkerecalisti=false;
           $.ajax({
               url: "/hepsi.xml",
               type: "GET",
               dataType: "xml",
               success: function(xml) {
-               console.log("ajaxx, başarılı");
-                
-                var counter = 1;
-                $(xml).find('ul').find('li').each(function(){
-                  // Only do it for the first 5 elements of .kltat class
-                   if (counter==5) {
-                     return false;
-                   } else {
-                     counter++;
-                   }
+                      if (!birkerecalisti) {
+                               console.log("ajaxx, başarılı");
+
+                                var counter = 1;
+                                $(xml).find('ul').find('li').each(function(){
+                                  // Only do it for the first 5 elements of .kltat class
+                                   if (counter==5) {
+                                     return false;
+                                   } else {
+                                     counter++;
+                                   }
                         
                                                 // The <ul> that we will add <li> elements to:
                                             let myList = document.querySelector('ul#parca-listesi');
@@ -115,16 +116,18 @@
                                             li.appendChild(b2);
                                             myList.appendChild(li);
                         
-                        track_list.push({ name: $(this).attr("data-title"), artist: $(this).attr("data-duration"), image: "http://kardelendergisi.com/atesiask/images/yeni77.jpg", path: $(this).attr("data-path") });
+                                track_list.push({ name: $(this).attr("data-title"), artist: $(this).attr("data-duration"), image: "http://kardelendergisi.com/atesiask/images/yeni77.jpg", path: $(this).attr("data-path") });
                         
                        
-                 });
-                curr_track.src = track_list[track_list.length-1].path; 
-                curr_track.load();
-                      
-                      var today = new Date();
-                      var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-                      console.log("Log: "+time+" --> "+"liste uzunluğu: "+track_list.length);
+                                 });
+                                curr_track.src = track_list[track_list.length-1].path; 
+                                curr_track.load();
+
+                                      var today = new Date();
+                                      var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+                                      console.log("Log: "+time+" --> "+"liste uzunluğu: "+track_list.length);
+                              birkerecalisti=true;
+                              }
               },
               error: function(status) {
                console.log("request error:");
