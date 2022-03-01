@@ -6,8 +6,8 @@
         var updateTimer;
 
         // Create new audio element
-        let curr_track = document.createElement('audio');
-        let playpause_btn = document.querySelector(".playpause-track");
+        var curr_track = document.createElement('audio');
+        var playpause_btn = document.querySelector(".playpause-track");
 
         // parça listesi
         var track_list = [
@@ -42,11 +42,11 @@
         //----------------------
         function ilk_parcayi_ayarlar() {
           //let parselle="https://www.mediafire.com/file/wame8e6p9gwuqu6/mededya.mp3";
-          let parselle=window.location.href;//https://www.mediafire.com/file/wame8e6p9gwuqu6/mededya
+          var parselle=window.location.href;//https://www.mediafire.com/file/wame8e6p9gwuqu6/mededya
           if (parselle.includes("?")) {
               console.log("persel: " + "true");
             parselle=parselle.replace('https://atesiask.netlify.app/?', '');
-            let url="https://www.mediafire.com/"+parselle+".mp3";
+            var url="https://www.mediafire.com/"+parselle+".mp3";
               console.log("parselli url: " + url);
               track_list.push({ name: "Meded", 
                                artist: "Gavs", 
@@ -88,7 +88,9 @@
                         console.log("path: "+track_list[track_list.length-1].path);
                         
                  });
-                
+                curr_track.src = track_list[track_list.length-1].path; 
+                curr_track.load();
+                      console.log("path: "+track_list[track_list.length-1].path);
               },
               error: function(status) {
                console.log("request error:");
