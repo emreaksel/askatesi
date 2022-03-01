@@ -1,16 +1,16 @@
 //merhabalar :)
 
         var track_index = 0;
-        let isPlaying = false;
+        var isPlaying = false;
         var next_type = 1; //0 karışık, 1 sıra ile, 2 tekrarlı
-        let updateTimer;
+        var updateTimer;
 
         // Create new audio element
         let curr_track = document.createElement('audio');
         let playpause_btn = document.querySelector(".playpause-track");
 
         // parça listesi
-        let track_list = [
+        var track_list = [
             {
                 name: "Ey Ademoğlu",
                 artist: "K. Eroglu",
