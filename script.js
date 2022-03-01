@@ -95,14 +95,15 @@
                                             //li.setAttribute('role', 'menuitem');
 
                                             // Now create an <b> element:
-                                            let b1 = document.createElement('label');
-                                            let b2 = document.createElement('label');
+                                            let b1 = document.createElement('div');
+                                            let b2 = document.createElement('div');
 
                                             b1.style.color = 'white';
-                                        b1.style.display = 'table-cell';
+                                            b1.style.fontSize = "10px";
+                                            b1.style.display = 'table-cell';
                                         
                                             b2.style.color = 'white';
-                                            b2.style.fontSize = "8px";
+                                            b2.style.fontSize = "10px";
                                             b2.style.display = 'table-cell';
                                             b2.style.position = 'absolute';
                                             b2.style.right = '15px';
