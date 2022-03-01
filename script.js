@@ -91,7 +91,7 @@
                                             // Give it the desired classes & attributes:
                                             li.classList.add('list-group-item');
                                             li.style.background = 'black';
-                                            //li.style.cssText = 'display: flex;flex - direction: column;'
+                                            li.style.display = 'table-row';
                                             //li.setAttribute('role', 'menuitem');
 
                                             // Now create an <b> element:
@@ -99,11 +99,13 @@
                                             let b2 = document.createElement('label');
 
                                             b1.style.color = 'white';
-                                            b2.style.color = 'white';
+                                        b1.style.display = 'table-cell';
                                         
-                                            b2.style.marginRight = "10px";
-                                            //b1.style.backgroundColor = 'black';
-                                            //b2.style.backgroundColor = 'black';
+                                            b2.style.color = 'white';
+                                            b2.style.fontSize = "8px";
+                                            b2.style.display = 'table-cell';
+                                            b2.style.position = 'absolute';
+                                            b2.style.right = '15px';
 
                                             b1.innerText = $(this).attr("data-title"); 
                                             b2.innerText = $(this).attr("data-duration");
