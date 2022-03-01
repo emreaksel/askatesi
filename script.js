@@ -64,7 +64,7 @@
         }
         //----------------------
 
-        $(document).ready(function() {
+       
           $.ajax({
               url: "/hepsi.xml",
               type: "GET",
@@ -130,7 +130,7 @@
                console.log("request error:");
               }
           });
-        });
+        
 //----------------------
 console.log("adresin yeri: " + window.location.href);
 ilk_parcayi_ayarlar();
