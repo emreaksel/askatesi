@@ -97,19 +97,16 @@
                                             // Now create an <b> element:
                                             let b1 = document.createElement('label');
                                             let b2 = document.createElement('label');
-                                            let b3 = document.createElement('b');
 
-                                            // Give it the desired classes & attributes:
-                                            //a.classList.add('ui-all');
-                                            //a.tabIndex = -1;
-                                            //b1.style.color = 'white';
-                                            //b2.style.color = 'white';
+                                            b1.style.color = 'white';
+                                            b2.style.color = 'white';
+                                        
+                                            b2.style.marginRight = "10px";
                                             //b1.style.backgroundColor = 'black';
                                             //b2.style.backgroundColor = 'black';
 
                                             b1.innerText = $(this).attr("data-title"); 
                                             b2.innerText = $(this).attr("data-duration");
-                                            //a.href = "#"
 
                                             // Now add the <a> to the <li>, and add the <li> to the <ul>
                                             li.appendChild(b1);
