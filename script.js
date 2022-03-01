@@ -92,6 +92,7 @@
                                             li.classList.add('list-group-item');
                                             li.style.background = 'black';
                                             li.style.display = 'table-row';
+                                            li.style.width = '100%';
                                             //li.setAttribute('role', 'menuitem');
 
                                             // Now create an <b> element:
