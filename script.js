@@ -1,6 +1,6 @@
 //merhabalar :)
 
-        let track_index = 0;
+        var track_index = 0;
         let isPlaying = false;
         var next_type = 1; //0 karışık, 1 sıra ile, 2 tekrarlı
         let updateTimer;
@@ -20,9 +20,6 @@
                 //path: "https://www.mediafire.com/download/rjvwin4c/eyademoglu_keroglu.mp3"
             },
         ];
-
-//curr_track.src = track_list[track_index].path;
-            //curr_track.load();
 
 //----------------------
         function playpauseTrack() {
@@ -73,7 +70,7 @@
               type: "GET",
               dataType: "xml",
               success: function(xml) {
-               console.log("ajax, başarılı");
+               console.log("ajaxx, başarılı");
                 
                 var counter = 1;
                 $(xml).find('ul').find('li').each(function(){
@@ -88,6 +85,7 @@
                         const ses = $(this).attr("data-duration");
                         track_list.push({ name: $(this).attr("data-title"), artist: $(this).attr("data-duration"), image: "http://kardelendergisi.com/atesiask/images/yeni77.jpg", path: $(this).attr("data-path") });
                         console.log("url: "+url+" ad: "+ad+" ses: "+ses);
+                        console.log("path: "+track_list[track_list.length-1].path);
                         
                  });
                 
