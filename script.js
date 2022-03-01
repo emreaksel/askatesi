@@ -92,7 +92,7 @@
                                             li.classList.add('list-group-item');
                                             li.style.background = 'black';
                                             li.style.display = 'table-row';
-                                            li.style.width = '100%';
+                                            
                                             //li.setAttribute('role', 'menuitem');
 
                                             // Now create an <b> element:
@@ -115,6 +115,7 @@
                                             // Now add the <a> to the <li>, and add the <li> to the <ul>
                                             li.appendChild(b1);
                                             li.appendChild(b2);
+                                            li.style.width = '100%';
                                             myList.appendChild(li);
                         
                                 track_list.push({ name: $(this).attr("data-title"), artist: $(this).attr("data-duration"), image: "http://kardelendergisi.com/atesiask/images/yeni77.jpg", path: $(this).attr("data-path") });
