@@ -80,11 +80,43 @@
                    } else {
                      counter++;
                    }
-                        const url = $(this).attr("data-path");
-                        const ad = $(this).attr("data-title");
-                        const ses = $(this).attr("data-duration");
+                        
+                                                // The <ul> that we will add <li> elements to:
+                                            let myList = document.querySelector('ul#parca-listesi');
+
+                                            // Create an <li> element:
+                                            let li = document.createElement('li');
+
+                                            // Give it the desired classes & attributes:
+                                            li.classList.add('list-group-item');
+                                            li.style.background = 'black';
+                                            //li.style.cssText = 'display: flex;flex - direction: column;'
+                                            //li.setAttribute('role', 'menuitem');
+
+                                            // Now create an <b> element:
+                                            let b1 = document.createElement('label');
+                                            let b2 = document.createElement('label');
+                                            let b3 = document.createElement('b');
+
+                                            // Give it the desired classes & attributes:
+                                            //a.classList.add('ui-all');
+                                            //a.tabIndex = -1;
+                                            b1.style.color = 'white';
+                                            b2.style.color = 'white';
+                                            b1.style.backgroundColor = 'black';
+                                            b2.style.backgroundColor = 'black';
+
+                                            b1.innerText = $(this).attr("data-title"); 
+                                            b2.innerText = $(this).attr("data-duration");
+                                            //a.href = "#"
+
+                                            // Now add the <a> to the <li>, and add the <li> to the <ul>
+                                            li.appendChild(b1);
+                                            li.appendChild(b2);
+                                            myList.appendChild(li);
+                        
                         track_list.push({ name: $(this).attr("data-title"), artist: $(this).attr("data-duration"), image: "http://kardelendergisi.com/atesiask/images/yeni77.jpg", path: $(this).attr("data-path") });
-                        //console.log("url: "+url+" ad: "+ad+" ses: "+ses);
+                        
                        
                  });
                 curr_track.src = track_list[track_list.length-1].path; 
