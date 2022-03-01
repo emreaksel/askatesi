@@ -123,8 +123,8 @@
                 curr_track.load();
                       
                       var today = new Date();
-            var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-                      console.log("Log: "time+" --> "+"liste uzunluğu: "+track_list.length);
+                      var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+                      console.log("Log: "+time+" --> "+"liste uzunluğu: "+track_list.length);
               },
               error: function(status) {
                console.log("request error:");
