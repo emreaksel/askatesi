@@ -1,5 +1,5 @@
 //merhabalar :)
-        konsola_yaz("Debug", ' Denemeler: ' + "1");
+        konsola_yaz("Debug", ' Denemeler: ' + 2");
         var track_index = 0;
         var isPlaying = false;
         var next_type = 0; //0 karışık, 1 sıra ile, 2 tekrarlı
@@ -70,7 +70,7 @@
         function seekTo() {
             let seek_slider = document.querySelector(".seek_slider");
              //bu satırda jquery kullnınca hata aldık
-            curr_track.currentTime =Math.floor(curr_track.duration * (seek_slider.value) / 100));;
+            curr_track.currentTime =Math.floor(curr_track.duration * (seek_slider.value) / 100);
         }
         //----------------------
         function seekUpdate() {
