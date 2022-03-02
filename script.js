@@ -1,5 +1,5 @@
 //merhabalar :)
-        konsola_yaz("Debug", ' Denemeler: ' + 4);
+        konsola_yaz("Debug", ' Denemeler: ' + 5);
         var track_index = 0;
         var isPlaying = false;
         var next_type = 0; //0 karışık, 1 sıra ile, 2 tekrarlı
@@ -62,7 +62,7 @@
             curr_track.load();
                 
                 $(".track-name").text(track_list[track_index].name);
-                $(".track-artist").text(track_list[track_index].artist);
+                $(".track-artist").text(track_list[track_index].artist.replace(':', ''));
                 clearInterval(updateTimer);
                 updateTimer = setInterval(seekUpdate, 1000);
         }
