@@ -2,7 +2,7 @@
 
         var track_index = 0;
         var isPlaying = false;
-        var next_type = 1; //0 karışık, 1 sıra ile, 2 tekrarlı
+        var next_type = 0; //0 karışık, 1 sıra ile, 2 tekrarlı
         var updateTimer;
 
         // Create new audio element
@@ -39,6 +39,23 @@
             playpause_btn.innerHTML = '<i class="fa fa-play-circle fa-3x"></i>';
         }
         //----------------------
+        function nextTrack() {
+            if (next_type == 0) { //karışık
+                track_index = Math.floor(Math.random() * track_list.length);
+            }
+            else if (next_type == 1) {
+                if (track_index < track_list.length - 1)
+                    track_index += 1;
+                else track_index = 0;
+            }
+            else if (next_type == 2) {
+                //track index sabit kalır
+            }
+            konsola_yaz("function nextTrack", ' Track Index: ' + track_index);
+            loadTrack(track_index);
+            playTrack();
+        }
+        //----------------------
         //----------------------
         function loadTrack(track_index) {
             curr_track.src = track_list[track_index].path;
@@ -46,6 +63,12 @@
                 
                 $(".track-name").text(track_list[track_index].name);
                 $(".track-artist").text(track_list[track_index].artist);
+        }
+        //----------------------
+        function resetValues() {
+            curr_time.textContent = "00:00";
+            total_duration.textContent = "00:00";
+            $(".seek_slider").value = 0;
         }
         //----------------------
         //----------------------
