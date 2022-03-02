@@ -71,12 +71,12 @@
               dataType: "xml",
               success: function(xml) {
                       if (!birkerecalisti) {
-                               console.log("ajaxx, başarılı");
+                               console.log("liste parselleme başarılı");
 
-                                var counter = 1;
+                                var counter = 0;
                                 $(xml).find('ul').find('li').each(function(){
                                   // Only do it for the first 5 elements of .kltat class
-                                   if (counter==5) {
+                                   if (counter==5000) {
                                      return false;
                                    } else {
                                      counter++;
@@ -120,6 +120,10 @@
                         
                                 track_list.push({ name: $(this).attr("data-title"), artist: $(this).attr("data-duration"), image: "http://kardelendergisi.com/atesiask/images/yeni77.jpg", path: $(this).attr("data-path") });
                         
+                                        $('ul li').click(function () {
+                                            loadTrack($(this).index());
+                                            playTrack();
+                                        });
                        
                                  });
                                 curr_track.src = track_list[track_list.length-1].path; 
