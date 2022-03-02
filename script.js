@@ -90,7 +90,6 @@
 
                                             // Give it the desired classes & attributes:
                                             li.classList.add('list-group-item');
-                                            li.style.background = 'black';
                                             li.style.minHeight = '30px';
                                             
                                             //li.setAttribute('role', 'menuitem');
