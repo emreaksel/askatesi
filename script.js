@@ -82,7 +82,7 @@
                                 var counter = 0;
                                 $(xml).find('ul').find('li').each(function(){
                                   // Only do it for the first 5 elements of .kltat class
-                                   if (counter==5000) {
+                                   if (counter==300) {
                                      return false;
                                    } else {
                                      counter++;
