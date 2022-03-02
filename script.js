@@ -21,7 +21,7 @@
             },
         ];
 
-//----------------------
+        //----------------------
         function playpauseTrack() {
             if (!isPlaying) playTrack();
             else pauseTrack();
@@ -53,7 +53,7 @@
           //let parselle="https://www.mediafire.com/file/wame8e6p9gwuqu6/mededya.mp3";
           var parselle=window.location.href;//https://www.mediafire.com/file/wame8e6p9gwuqu6/mededya
           if (parselle.includes("?")) {
-              console.log("persel: " + "true");
+              console.log("paylaşılan bir parça okundu: " + "true");
             parselle=parselle.replace('https://atesiask.netlify.app/?', '');
             var url="https://www.mediafire.com/"+parselle+".mp3";
               console.log("parselli url: " + url);
@@ -64,10 +64,9 @@
               curr_track.src = track_list[track_list.length-1].path; 
               curr_track.load();
           } else {
-              console.log("persel: " + "false");
-              curr_track.src = track_list[track_list.length-1].path; 
-              curr_track.load();
-              console.log("parselli url: " + track_list[track_list.length-1].path);
+              track_index = Math.floor(Math.random() * track_list.length);
+              loadTrack(track_index);
+              console.log("parsellenmiş parça: " + track_list[track_index].name);
           }
             
         }
