@@ -496,6 +496,8 @@ html {
   position: relative;
   top: 0;
   margin-top: 5px;
+	padding-left:7px;
+	padding-right:7px;
   -webkit-transition: top .2s ease-in-out;
   transition: top .2s ease-in-out;
 }
