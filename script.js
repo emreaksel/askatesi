@@ -68,7 +68,8 @@
         }
         //----------------------
         function seekTo() {
-            var seekto = parseInt(curr_track.duration * (document.getElementById('.seek_slider').value / 100)); //bu satırda jquery kullnınca hata aldık
+                //const seekSlider = document.getElementById('seek_slider');
+            var seekto = parseInt(curr_track.duration * (document.getElementsByClassName('seek_slider').value / 100)); //bu satırda jquery kullnınca hata aldık
             curr_track.currentTime = seekto;
         }
         //----------------------
