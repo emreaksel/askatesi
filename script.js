@@ -79,7 +79,7 @@
                       if (!birkerecalisti) {
                                console.log("liste parselleme başarılı");
 
-                                var counter = -1;
+                                var counter = 0;
                                 $(xml).find('ul').find('li').each(function(){
                                   // Only do it for the first 5 elements of .kltat class
                                    if (counter==300) {
@@ -127,7 +127,7 @@
                                 track_list.push({ name: $(this).attr("data-title"), artist: $(this).attr("data-duration"), image: "http://kardelendergisi.com/atesiask/images/yeni77.jpg", path: $(this).attr("data-path") });
                         
                                         $('ul li').click(function () {
-                                            loadTrack($(this).index());
+                                            loadTrack($(this).index()+1);
                                             playTrack();
                                         });
                        
