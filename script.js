@@ -91,7 +91,7 @@
                                             // Give it the desired classes & attributes:
                                             li.classList.add('list-group-item');
                                             li.style.background = 'black';
-                                            li.style.display = 'table-row';
+                                            li.style.minHeight = '35px';
                                             
                                             //li.setAttribute('role', 'menuitem');
 
@@ -103,10 +103,10 @@
                                             b1.style.fontSize = "10px";
                                             b1.style.display = 'table-cell';
                                         
-                                            b2.style.color = 'white';
-                                            b2.style.fontSize = "10px";
-                                            b2.style.display = 'table-cell';
+                                            b1.style.position = 'absolute';
                                             b2.style.position = 'absolute';
+
+                                            b1.style.left = '15px';
                                             b2.style.right = '15px';
 
                                             b1.innerText = $(this).attr("data-title"); 
