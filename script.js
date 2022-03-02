@@ -63,6 +63,36 @@
                 
                 $(".track-name").text(track_list[track_index].name);
                 $(".track-artist").text(track_list[track_index].artist);
+                clearInterval(updateTimer);
+                updateTimer = setInterval(seekUpdate, 1000);
+        }
+        //----------------------
+        function seekTo() {
+            var seekto = curr_track.duration * ($(".seek_slider").value / 100);
+            curr_track.currentTime = seekto;
+        }
+        //----------------------
+        function seekUpdate() {
+            var seekPosition = 0;
+
+            if (!isNaN(curr_track.duration)) {
+                seekPosition = curr_track.currentTime * (100 / curr_track.duration);
+
+                $(".seek_slider").value = seekPosition;
+
+                var currentMinutes = Math.floor(curr_track.currentTime / 60);
+                var currentSeconds = Math.floor(curr_track.currentTime - currentMinutes * 60);
+                var durationMinutes = Math.floor(curr_track.duration / 60);
+                var durationSeconds = Math.floor(curr_track.duration - durationMinutes * 60);
+
+                if (currentSeconds < 10) { currentSeconds = "0" + currentSeconds; }
+                if (durationSeconds < 10) { durationSeconds = "0" + durationSeconds; }
+                if (currentMinutes < 10) { currentMinutes = "0" + currentMinutes; }
+                if (durationMinutes < 10) { durationMinutes = "0" + durationMinutes; }
+
+                $(".curr_time").textContent = currentMinutes + ":" + currentSeconds;
+                $(".total_duration").textContent = durationMinutes + ":" + durationSeconds;
+            }
         }
         //----------------------
         function resetValues() {
