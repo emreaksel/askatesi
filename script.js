@@ -68,9 +68,9 @@
         }
         //----------------------
         function seekTo() {
-            const seekSlider = document.getElementsByClassName('seek_slider');
+            let seek_slider = document.querySelector(".seek_slider");
              //bu satırda jquery kullnınca hata aldık
-            curr_track.currentTime =Math.floor(curr_track.duration * (Math.floor($(".seek_slider").value) / 100));;
+            curr_track.currentTime =Math.floor(curr_track.duration * (seek_slider.value) / 100));;
         }
         //----------------------
         function seekUpdate() {
