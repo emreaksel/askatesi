@@ -40,6 +40,12 @@
         }
         //----------------------
         //----------------------
+        function loadTrack(track_index) {
+            curr_track.src = track_list[track_index].path;
+            curr_track.load();
+        }
+        //----------------------
+        //----------------------
         function ilk_parcayi_ayarlar() {
           //let parselle="https://www.mediafire.com/file/wame8e6p9gwuqu6/mededya.mp3";
           var parselle=window.location.href;//https://www.mediafire.com/file/wame8e6p9gwuqu6/mededya
