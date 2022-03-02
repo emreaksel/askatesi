@@ -154,6 +154,11 @@ html {
   background-color: #000000;
 }
 
+.song_playing {
+  color: #fff;
+  background-color: #000000;
+}
+
 .header_name {
   font-size: 13px;
   font-weight: 500;
