@@ -68,7 +68,7 @@
         }
         //----------------------
         function seekTo() {
-            var seekto = curr_track.duration * ($(".seek_slider").value / 100);
+            var seekto = parseInt(curr_track.duration * ($(".seek_slider").value / 100));
             curr_track.currentTime = seekto;
         }
         //----------------------
@@ -90,8 +90,8 @@
                 if (currentMinutes < 10) { currentMinutes = "0" + currentMinutes; }
                 if (durationMinutes < 10) { durationMinutes = "0" + durationMinutes; }
 
-                $(".curr_time").textContent = currentMinutes + ":" + currentSeconds;
-                $(".total_duration").textContent = durationMinutes + ":" + durationSeconds;
+                $(".current-time").textContent = currentMinutes + ":" + currentSeconds;
+                $(".total-duration").textContent = durationMinutes + ":" + durationSeconds;
             }
         }
         //----------------------
