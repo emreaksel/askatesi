@@ -315,7 +315,7 @@ html {
   height: 305px;
   -webkit-transition: top .2s ease-in-out;
   transition: top .2s ease-in-out;
-  background-color: rgba(255, 255, 255, 1);
+  background-color: #000000;
 }
 
 .player_playlist::-webkit-scrollbar {
