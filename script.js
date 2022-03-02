@@ -1,5 +1,5 @@
 //merhabalar :)
-        konsola_yaz("Debug", ' Denemeler: ' + 3);
+        konsola_yaz("Debug", ' Denemeler: ' + 4);
         var track_index = 0;
         var isPlaying = false;
         var next_type = 0; //0 karışık, 1 sıra ile, 2 tekrarlı
@@ -75,11 +75,14 @@
         //----------------------
         function seekUpdate() {
             var seekPosition = 0;
-
+        let curr_time = document.querySelector(".current-time");
+        let total_duration = document.querySelector(".total-duration");
+        let seek_slider = document.querySelector(".seek_slider");
+                
             if (!isNaN(curr_track.duration)) {
                 seekPosition = curr_track.currentTime * (100 / curr_track.duration);
 
-                $(".seek_slider").value = seekPosition;
+                seek_slider.value = seekPosition;
 
                 var currentMinutes = Math.floor(curr_track.currentTime / 60);
                 var currentSeconds = Math.floor(curr_track.currentTime - currentMinutes * 60);
@@ -91,8 +94,8 @@
                 if (currentMinutes < 10) { currentMinutes = "0" + currentMinutes; }
                 if (durationMinutes < 10) { durationMinutes = "0" + durationMinutes; }
 
-                $(".current-time").textContent = currentMinutes + ":" + currentSeconds;
-                $(".total-duration").textContent = durationMinutes + ":" + durationSeconds;
+                curr_time.textContent = currentMinutes + ":" + currentSeconds;
+                total_duration.textContent = durationMinutes + ":" + durationSeconds;
             }
         }
         //----------------------
