@@ -91,7 +91,7 @@
                                             // Give it the desired classes & attributes:
                                             li.classList.add('list-group-item');
                                             li.style.background = 'black';
-                                            li.style.minHeight = '35px';
+                                            li.style.minHeight = '30px';
                                             
                                             //li.setAttribute('role', 'menuitem');
 
@@ -99,9 +99,11 @@
                                             let b1 = document.createElement('div');
                                             let b2 = document.createElement('div');
 
-                                            b1.style.color = 'white';
-                                            b1.style.fontSize = "10px";
-                                            b1.style.display = 'table-cell';
+                                            b1.style.color = 'black';
+                                            b2.style.color = 'black';
+
+                                            b1.style.fontSize = "10px";b2.style.fontSize = "10px";
+                                            
                                         
                                             b1.style.position = 'absolute';
                                             b2.style.position = 'absolute';
