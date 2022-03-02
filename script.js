@@ -79,7 +79,7 @@
                       if (!birkerecalisti) {
                                console.log("liste parselleme başarılı");
 
-                                var counter = 0;
+                                var counter = -1;
                                 $(xml).find('ul').find('li').each(function(){
                                   // Only do it for the first 5 elements of .kltat class
                                    if (counter==300) {
