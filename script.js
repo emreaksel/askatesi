@@ -68,7 +68,7 @@
         }
         //----------------------
         function seekTo() {
-            var seekto = parseInt(curr_track.duration * ($(".seek_slider").value / 100));
+            var seekto = parseInt(curr_track.duration * (document.getElementById('seek_slider').value / 100)); //bu satırda jquery kullnınca hata aldık
             curr_track.currentTime = seekto;
         }
         //----------------------
