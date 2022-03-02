@@ -43,6 +43,9 @@
         function loadTrack(track_index) {
             curr_track.src = track_list[track_index].path;
             curr_track.load();
+                
+                $(".track-name").text(track_list[track_index].name);
+                $(".track-artist").text(track_list[track_index].artist);
         }
         //----------------------
         //----------------------
