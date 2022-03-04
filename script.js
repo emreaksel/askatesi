@@ -274,7 +274,7 @@
                     for (var i = 0, len = resimler.length; i < len; i++) {
                              if (resimler[i].replaceAll('"', '').includes(".jpg")) {
                                      var foto=resimler[i].replaceAll('"', '').replaceAll(' ', '');
-                                list_images.push("https://kardelendergisi.com/atesiask/images/" + foto);
+                                list_images.push("http://kardelendergisi.com/atesiask/images/" + foto);
                                 //console.log("images: "+list_images[list_images.length-1]);
                              }
                     }
