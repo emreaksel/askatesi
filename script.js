@@ -1,5 +1,5 @@
 //merhabalar :)
-        konsola_yaz("Debug", ' Denemeler: ' + 7);
+        konsola_yaz("Debug", ' Denemeler: ' + 8);
         var track_index = 0;
         var isPlaying = false;
         var next_type = 0; //0 karışık, 1 sıra ile, 2 tekrarlı
@@ -213,6 +213,23 @@
             console.log(" Log " + time + " --> " + tanım + " --> " + aciklama);
         }
         //----------------------
+//----------------------
+        var birkerecalisti_nukte=false;
+        $.ajax({
+              url: "/nukte.txt",
+              type: "GET",
+              dataType: "text",
+              success: function(text) {
+                      if (!birkerecalisti_nukte) {
+                               console.log("nukte parselleme başarılı");
+                                     console.log("nukte: "+text);
+                              birkerecalisti_nukte=true;
+                              }
+              },
+              error: function(status) {
+               console.log("request error:");
+              }
+          });
 //----------------------
 console.log("adresin yeri: " + window.location.href);
 
