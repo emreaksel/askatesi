@@ -1,5 +1,5 @@
 //merhabalar :)
-        konsola_yaz("Debug", ' Denemeler: ' + 15);
+        konsola_yaz("Debug", ' Denemeler: ' + 16);
         var track_index = 0;
         var isPlaying = false;
         var next_type = 0; //0 karışık, 1 sıra ile, 2 tekrarlı
@@ -128,7 +128,14 @@
             
         }
         //----------------------
-
+function konsola_yaz(tanım, aciklama="") {
+            var today = new Date();
+            var date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
+            var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+            var dateTime = date + ' ' + time;
+            console.log(" Log " + time + " --> " + tanım + " --> " + aciklama);
+        }
+        //----------------------
        var birkerecalisti=false;
           $.ajax({
               url: "/baska.xml",
@@ -205,14 +212,7 @@
           });
         
  //----------------------
-        function konsola_yaz(tanım, aciklama="") {
-            var today = new Date();
-            var date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
-            var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-            var dateTime = date + ' ' + time;
-            console.log(" Log " + time + " --> " + tanım + " --> " + aciklama);
-        }
-        //----------------------
+        
 //----------------------
         var birkerecalisti_nukte=false;
         $.ajax({
