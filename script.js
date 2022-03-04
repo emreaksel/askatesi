@@ -1,5 +1,5 @@
 //merhabalar :)
-        konsola_yaz("Debug", ' Denemeler: ' + 26);
+        konsola_yaz("Debug", ' Denemeler: ' + 27);
         var track_index = 0;
         var isPlaying = false;
         var next_type = 0; //0 karışık, 1 sıra ile, 2 tekrarlı
@@ -252,7 +252,7 @@
     //Resimleri Getirir
         var birkerecalisti_resim=false;
         $.ajax({
-            url: './images',
+            url: './images.html',
             type: 'GET',
             dataType: "html",
             success: function (data) {
