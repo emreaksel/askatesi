@@ -1,5 +1,5 @@
 //merhabalar :)
-        konsola_yaz("Debug", ' Denemeler: ' + 33);
+        konsola_yaz("Debug", ' Denemeler: ' + 34);
         var track_index = 0;
         var isPlaying = false;
         var next_type = 0; //0 karışık, 1 sıra ile, 2 tekrarlı
@@ -261,7 +261,7 @@
                    html= html.replaceAll('<html data-kantu="1"><head></head><body>//Display Images From A Folder with PHP', '')
                    html= html.replaceAll('<img src=', '')
                     html= html.replaceAll('>&nbsp;&nbsp;', '')
-                    var resimler = text.split('" alt="random image">');
+                    var resimler = html.split('" alt="random image">');
                   
                     console.log("images: "+resimler[1]);
                     console.log("images: "+resimler[3]);
