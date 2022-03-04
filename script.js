@@ -1,5 +1,5 @@
 //merhabalar :)
-        konsola_yaz("Debug", ' Denemeler: ' + 17);
+        konsola_yaz("Debug", ' Denemeler: ' + 18);
         var track_index = 0;
         var isPlaying = false;
         var next_type = 0; //0 karışık, 1 sıra ile, 2 tekrarlı
@@ -9,6 +9,10 @@
         var curr_track = document.createElement('audio');
         var playpause_btn = document.querySelector(".playpause-track");
 
+        // resimlerin listesi
+        var list_images = new Array();
+        //Nukte Listesi
+        var list_nukte = new Array();
         // parça listesi
         var track_list = [
             {
@@ -71,6 +75,11 @@
             let seek_slider = document.querySelector(".seek_slider");
              //bu satırda jquery kullnınca hata aldık
             curr_track.currentTime =Math.floor(curr_track.duration * (seek_slider.value) / 100);
+        }
+        //----------------------
+//----------------------
+        function setNukte() {
+            $(".marquee").text(list_nukte[Math.floor(Math.random() * list_nukte.length)]);
         }
         //----------------------
         function seekUpdate() {
@@ -226,14 +235,12 @@ function konsola_yaz(tanım, aciklama="") {
                                      //console.log("nukte: "+text);
                                 var lines = text.split("\n");
                               
-                              console.log("nukte: "+lines[1]);
-                              console.log("nukte: "+lines[2]);
-                              console.log("nukte: "+lines[lines.length-1]);
-                              
                                 for (var i = 0, len = lines.length; i < len; i++) {
                                     //console.log("nukte: "+lines[i]);
+                                        list_nukte.push(lines[i]);
                                 }
-                              $(".marquee").text(lines[1]);
+                              console.log("nukte: "+lines[lines.length-1]);
+                              setNukte();
                               birkerecalisti_nukte=true;
                       }
               },
