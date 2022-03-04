@@ -28,7 +28,7 @@
         //----------------------
         curr_track.onended = function () {
                 nextTrack();
-        ;
+        };
         //----------------------
         function playpauseTrack() {
             if (!isPlaying) playTrack();
