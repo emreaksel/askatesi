@@ -1,5 +1,6 @@
-//merhabalar :)
-        konsola_yaz("Debug", ' Denemeler: ' + 41);
+        //merhabalar :)
+        konsola_yaz("Debug", ' Denemeler: ' + 42);
+
         var track_index = 0;
         var isPlaying = false;
         var next_type = 0; //0 karışık, 1 sıra ile, 2 tekrarlı
@@ -80,6 +81,11 @@
         //----------------------
         function setNukte() {
             $(".marquee").text(list_nukte[Math.floor(Math.random() * list_nukte.length)]); //buradaki rastgele son nukteyi de seçebiliyor list_nukte.length-1 gibi davranıyor
+        }
+        //----------------------
+        //----------------------
+        function setImage() {
+            $("#resim").attr("src", list_images[Math.floor(Math.random() * list_images.length)]);
         }
         //----------------------
         //----------------------
@@ -268,22 +274,10 @@
                     for (var i = 0, len = resimler.length; i < len; i++) {
                              if (resimler[i].replaceAll('"', '').includes(".jpg")) {
                                 list_images.push("http://kardelendergisi.com/atesiask/images/" + resimler[i].replaceAll('"', ''));
-                                console.log("images: "+list_images[list_images.length-1]);
+                                //console.log("images: "+list_images[list_images.length-1]);
                              }
                     }
-                    //console.log("images: "+html);
-                //console.log("images: "+$(html).find('img')[1].attr('src'));
-                //console.log("images: "+$(html));
-
-                for (i = 0; i < html.length; i++) {
-                    if (data[i].includes("aspx") || data[i].includes("ascx")) {
-                        //---
-                    } else {
-                        list_images.push("http://kardelendergisi.com/atesiask/images/" + data[i]);
-                        //konsola_yaz(list_images[i]);
-                    }
-                }
-                //alert(list_images.join("\n"));
+                  
                 setImage();
                 birkerecalisti_resim=true;
                 konsola_yaz("Fotoğraflar Hazırlandı", "Fotoğraf adedi:" + list_images.length)
