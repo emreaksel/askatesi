@@ -50,8 +50,10 @@ html {
 }
 
 .marquee {
+  height: 50px;
   font-family: 'Fredoka', sans-serif;
   font-size: 10px;
+  text-align: center;
 }
 
 .spinner {
