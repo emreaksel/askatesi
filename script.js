@@ -1,5 +1,5 @@
 //merhabalar :)
-        konsola_yaz("Debug", ' Denemeler: ' + 18);
+        konsola_yaz("Debug", ' Denemeler: ' + 19);
         var track_index = 0;
         var isPlaying = false;
         var next_type = 0; //0 karışık, 1 sıra ile, 2 tekrarlı
@@ -77,10 +77,11 @@
             curr_track.currentTime =Math.floor(curr_track.duration * (seek_slider.value) / 100);
         }
         //----------------------
-//----------------------
+        //----------------------
         function setNukte() {
-            $(".marquee").text(list_nukte[Math.floor(Math.random() * list_nukte.length)]);
+            $(".marquee").text(list_nukte[Math.floor(Math.random() * list_nukte.length)]); //buradaki rastgele son nukteyi de seçebiliyor list_nukte.length-1 gibi davranıyor
         }
+        //----------------------
         //----------------------
         function seekUpdate() {
             var seekPosition = 0;
@@ -239,7 +240,7 @@ function konsola_yaz(tanım, aciklama="") {
                                     //console.log("nukte: "+lines[i]);
                                         list_nukte.push(lines[i]);
                                 }
-                              console.log("nukte: "+lines[lines.length-1]);
+                              console.log("Log: "+time+" --> "+"nukte uzunluğu: "+list_nukte.length);
                               setNukte();
                               birkerecalisti_nukte=true;
                       }
