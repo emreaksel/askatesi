@@ -1,5 +1,5 @@
         //merhabalar :)
-        konsola_yaz("Debug", ' Denemeler: ' + 43);
+        konsola_yaz("Debug", ' Denemeler: ' + 44);
 
         var track_index = 0;
         var isPlaying = false;
@@ -273,7 +273,8 @@
                   
                     for (var i = 0, len = resimler.length; i < len; i++) {
                              if (resimler[i].replaceAll('"', '').includes(".jpg")) {
-                                list_images.push("https://kardelendergisi.com/atesiask/images/" + resimler[i].replaceAll('"', ''));
+                                     var foto=resimler[i].replaceAll('"', '').replaceAll(' ', '');
+                                list_images.push("https://kardelendergisi.com/atesiask/images/" + foto);
                                 //console.log("images: "+list_images[list_images.length-1]);
                              }
                     }
