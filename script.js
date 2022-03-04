@@ -1,5 +1,5 @@
         //merhabalar :)
-        konsola_yaz("Debug", ' Denemeler: ' + 44);
+        konsola_yaz("Debug", ' Denemeler: ' + 45);
 
         var track_index = 0;
         var isPlaying = false;
@@ -279,7 +279,7 @@
                              }
                     }
                   
-                setImage();
+                //setImage();
                 birkerecalisti_resim=true;
                 konsola_yaz("Fotoğraflar Hazırlandı", "Fotoğraf adedi:" + list_images.length)
             },
