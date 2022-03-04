@@ -250,6 +250,7 @@
 //----------------------
 //==============================================================================================
     //Resimleri Getirir
+        var birkerecalisti_resim=false;
         $.ajax({
             url: './images',
             type: 'GET',
@@ -269,6 +270,7 @@
                 }
                 //alert(list_images.join("\n"));
                 setImage();
+                birkerecalisti_resim=true;
                 konsola_yaz("Fotoğraflar Hazırlandı", "Fotoğraf adedi:" + list_images.length)
             },
             error: function () {
