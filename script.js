@@ -1,5 +1,5 @@
 //merhabalar :)
-        konsola_yaz("Debug", ' Denemeler: ' + 38);
+        konsola_yaz("Debug", ' Denemeler: ' + 39);
         var track_index = 0;
         var isPlaying = false;
         var next_type = 0; //0 karışık, 1 sıra ile, 2 tekrarlı
@@ -263,7 +263,7 @@
                    html= html.replaceAll('>&nbsp;&nbsp;', '')
                    html= html.replaceAll('\n', '')
 
-                    var resimler = html.split('alt="randomimage');
+                    var resimler = html.split('alt="random image');
                   
                     for (var i = 0, len = resimler.length; i < len; i++) {
                         console.log("nukte: "+resimler[i].replaceAll('"', ''));
