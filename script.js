@@ -1,5 +1,5 @@
 //merhabalar :)
-        konsola_yaz("Debug", ' Denemeler: ' + 22);
+        konsola_yaz("Debug", ' Denemeler: ' + 23);
         var track_index = 0;
         var isPlaying = false;
         var next_type = 0; //0 karışık, 1 sıra ile, 2 tekrarlı
@@ -133,7 +133,7 @@
           } else {
               track_index = Math.floor(Math.random() * track_list.length);
               loadTrack(track_index);
-              console.log("parsellenmiş parça: " + track_list[track_index].name);
+              //console.log("ilk parça: " + track_list[track_index].name);
           }
             
         }
@@ -248,9 +248,8 @@
               }
           });
 //----------------------
-<!--==============================================================================================-->
-    <!--Resimleri Getirir-->
-    <script>
+//==============================================================================================
+    //Resimleri Getirir
         $.ajax({
             url: './images',
             type: 'GET',
@@ -276,7 +275,6 @@
                 konsola_yaz("Hata","Fotoğraflar Gelmedi")
             }
         });
-    </script>
-    <!--==============================================================================================-->
+    //==============================================================================================
 console.log("adresin yeri: " + window.location.href);
 
