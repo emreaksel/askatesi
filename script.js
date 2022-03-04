@@ -1,5 +1,5 @@
 //merhabalar :)
-        konsola_yaz("Debug", ' Denemeler: ' + 40);
+        konsola_yaz("Debug", ' Denemeler: ' + 41);
         var track_index = 0;
         var isPlaying = false;
         var next_type = 0; //0 karışık, 1 sıra ile, 2 tekrarlı
@@ -268,7 +268,7 @@
                     for (var i = 0, len = resimler.length; i < len; i++) {
                              if (resimler[i].replaceAll('"', '').includes(".jpg")) {
                                 list_images.push("http://kardelendergisi.com/atesiask/images/" + resimler[i].replaceAll('"', ''));
-                                     console.log("images: "+list_images[list_images.lenght-1]);
+                                console.log("images: "+list_images[list_images.length-1]);
                              }
                     }
                     //console.log("images: "+html);
