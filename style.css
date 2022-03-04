@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Kavoon');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka&family=Kavoon&display=swap');
 
 body,
 html {
@@ -49,7 +50,7 @@ html {
 }
 
 .marquee {
-  font-family: Kavoon;
+  font-family: 'Fredoka', sans-serif;
   font-size: 10px;
 }
 
