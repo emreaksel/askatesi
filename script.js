@@ -1,5 +1,5 @@
 //merhabalar :)
-        konsola_yaz("Debug", ' Denemeler: ' + 31);
+        konsola_yaz("Debug", ' Denemeler: ' + 32);
         var track_index = 0;
         var isPlaying = false;
         var next_type = 0; //0 karışık, 1 sıra ile, 2 tekrarlı
@@ -258,10 +258,10 @@
             success: function (html) {
                 console.log("images parselleme başarılı");
                 
-                   html= html.replace('<html data-kantu="1"><head></head><body>//Display Images From A Folder with PHP', '')
-                   html= html.replace('<img src=', '')
-                   html= html.replace(' alt="random image"', '')
-                    html= html.replace('>&nbsp;&nbsp;', '')
+                   html= html.replaceAll('<html data-kantu="1"><head></head><body>//Display Images From A Folder with PHP', '')
+                   html= html.replaceAll('<img src=', '')
+                   html= html.replaceAll(' alt="random image"', '')
+                    html= html.replaceAll('>&nbsp;&nbsp;', '')
                     console.log("images: "+html);
                 //console.log("images: "+$(html).find('img')[1].attr('src'));
                 //console.log("images: "+$(html));
