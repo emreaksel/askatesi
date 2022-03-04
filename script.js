@@ -1,5 +1,5 @@
 //merhabalar :)
-        konsola_yaz("Debug", ' Denemeler: ' + 13);
+        konsola_yaz("Debug", ' Denemeler: ' + 14);
         var track_index = 0;
         var isPlaying = false;
         var next_type = 0; //0 karışık, 1 sıra ile, 2 tekrarlı
@@ -218,7 +218,7 @@
         $.ajax({
               url: "/nukte.txt",
               type: "GET",
-              contentType: "application/x-www-form-urlencoded;charset=utf-8",
+              contentType: "application/x-www-form-urlencoded;charset=ISO-8859-15",
               dataType: "text",
               success: function(text) {
                       if (!birkerecalisti_nukte) {
