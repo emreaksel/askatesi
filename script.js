@@ -1,5 +1,5 @@
 //merhabalar :)
-        konsola_yaz("Debug", ' Denemeler: ' + 8);
+        konsola_yaz("Debug", ' Denemeler: ' + 9);
         var track_index = 0;
         var isPlaying = false;
         var next_type = 0; //0 karışık, 1 sıra ile, 2 tekrarlı
@@ -222,7 +222,11 @@
               success: function(text) {
                       if (!birkerecalisti_nukte) {
                                console.log("nukte parselleme başarılı");
-                                     console.log("nukte: "+text);
+                                     //console.log("nukte: "+text);
+                                var lines = text.split("\n");
+                                for (var i = 0, i < lines.length; i++) {
+                                    console.log("nukte: "+lines[i]);
+                                }
                               birkerecalisti_nukte=true;
                               }
               },
