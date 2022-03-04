@@ -1,5 +1,5 @@
 //merhabalar :)
-        konsola_yaz("Debug", ' Denemeler: ' + 28);
+        konsola_yaz("Debug", ' Denemeler: ' + 29);
         var track_index = 0;
         var isPlaying = false;
         var next_type = 0; //0 karışık, 1 sıra ile, 2 tekrarlı
@@ -258,9 +258,10 @@
             success: function (data) {
                     console.log("images parselleme başarılı");
                     var html=data;
-               console.log("images: "+$(html).text());
+                console.log("images: "+$(html).text());
                 console.log("images: "+$(html).find('img')[1].attr('src'));
-                
+                                console.log("images: "+$(html));
+
                 for (i = 0; i < html.length; i++) {
                     if (data[i].includes("aspx") || data[i].includes("ascx")) {
                         //---
