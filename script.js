@@ -131,7 +131,7 @@
 
        var birkerecalisti=false;
           $.ajax({
-              url: "/hepsi.xml",
+              url: "/baska.xml",
               type: "GET",
               dataType: "xml",
               success: function(xml) {
