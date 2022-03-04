@@ -3,6 +3,7 @@
 body,
 html {
   font-family: 'Roboto', sans-serif;
+  color: rgb(255, 255, 255); //beyaz
   font-size: 15px;
   position: relative;
   z-index: 0;
@@ -49,6 +50,7 @@ html {
 
 .marquee {
   font-family: Kavoon;
+  
 }
 
 .spinner {
