@@ -1,5 +1,5 @@
 //merhabalar :)
-        konsola_yaz("Debug", ' Denemeler: ' + 30);
+        konsola_yaz("Debug", ' Denemeler: ' + 31);
         var track_index = 0;
         var isPlaying = false;
         var next_type = 0; //0 karışık, 1 sıra ile, 2 tekrarlı
@@ -257,9 +257,14 @@
             dataType: "html",
             success: function (html) {
                 console.log("images parselleme başarılı");
-                console.log("images: "+html);
-                console.log("images: "+$(html).find('img')[1].attr('src'));
-                console.log("images: "+$(html));
+                
+                   html= html.replace('<html data-kantu="1"><head></head><body>//Display Images From A Folder with PHP', '')
+                   html= html.replace('<img src=', '')
+                   html= html.replace(' alt="random image"', '')
+                    html= html.replace('>&nbsp;&nbsp;', '')
+                    console.log("images: "+html);
+                //console.log("images: "+$(html).find('img')[1].attr('src'));
+                //console.log("images: "+$(html));
 
                 for (i = 0; i < html.length; i++) {
                     if (data[i].includes("aspx") || data[i].includes("ascx")) {
