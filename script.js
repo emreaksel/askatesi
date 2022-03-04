@@ -1,5 +1,5 @@
 //merhabalar :)
-        konsola_yaz("Debug", ' Denemeler: ' + 19);
+        konsola_yaz("Debug", ' Denemeler: ' + 20);
         var track_index = 0;
         var isPlaying = false;
         var next_type = 0; //0 karışık, 1 sıra ile, 2 tekrarlı
@@ -138,7 +138,7 @@
             
         }
         //----------------------
-function konsola_yaz(tanım, aciklama="") {
+        function konsola_yaz(tanım, aciklama="") {
             var today = new Date();
             var date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
             var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
@@ -209,10 +209,8 @@ function konsola_yaz(tanım, aciklama="") {
                        
                                  });
                                 
-                                        ilk_parcayi_ayarlar();
-                                      var today = new Date();
-                                      var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-                                      console.log("Log: "+time+" --> "+"liste uzunluğu: "+track_list.length);
+                              ilk_parcayi_ayarlar();
+                              konsola_yaz("liste uzunluğu", ': ' + track_list.length);
                               birkerecalisti=true;
                               }
               },
@@ -240,7 +238,7 @@ function konsola_yaz(tanım, aciklama="") {
                                     //console.log("nukte: "+lines[i]);
                                         list_nukte.push(lines[i]);
                                 }
-                              console.log("Log: "+time+" --> "+"nukte uzunluğu: "+list_nukte.length);
+                              konsola_yaz("nukte uzunluğu", ': ' + list_nukte.length);
                               setNukte();
                               birkerecalisti_nukte=true;
                       }
