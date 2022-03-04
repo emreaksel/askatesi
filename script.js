@@ -225,8 +225,13 @@ function konsola_yaz(tanım, aciklama="") {
                                console.log("nukte parselleme başarılı");
                                      //console.log("nukte: "+text);
                                 var lines = text.split("\n");
+                              
+                              console.log("nukte: "+lines[1]);
+                              console.log("nukte: "+lines[2]);
+                              console.log("nukte: "+lines[lines.length-1]);
+                              
                                 for (var i = 0, len = lines.length; i < len; i++) {
-                                    console.log("nukte: "+lines[i]);
+                                    //console.log("nukte: "+lines[i]);
                                 }
                               $(".marquee").text(lines[1]);
                               birkerecalisti_nukte=true;
