@@ -458,7 +458,9 @@ html {
   height: 150px;
   margin-right: auto;
   margin-left: auto;
-  background: url(https://raw.githubusercontent.com/emreaksel/askatesi/main/logo_siyahfon.jpg);
+  /*  background: url(https://raw.githubusercontent.com/emreaksel/askatesi/main/logo_siyahfon.jpg); */
+  background: url(http://kardelendergisi.com/atesiask/images/eski_kapi.jpg);
+
   background-repeat: no-repeat;
   background-size: contain;
   box-shadow: 0 10px 20px -15px rgba(0, 0, 0, .35), 0 22px 40px -15px rgba(0, 0, 0, .20);
