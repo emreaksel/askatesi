@@ -1,5 +1,5 @@
         //merhabalar :)
-        konsola_yaz("Debug", ' Denemeler: ' + 54);
+        konsola_yaz("Debug", ' Denemeler: ' + 55);
 
         var track_index = 0;
         var isPlaying = false;
@@ -94,6 +94,54 @@
         }
         //----------------------
         //----------------------
+        function setListview() {
+                $.each(track_list, function (index) {
+                    // The <ul> that we will add <li> elements to:
+                    let myList = document.querySelector('ul#parca-listesi');
+
+                   // Create an <li> element:
+                    let li = document.createElement('li');
+
+                    // Give it the desired classes & attributes:
+                                            li.classList.add('list-group-item');
+                                            li.style.minHeight = '30px';
+                                            li.style.background = 'black';
+
+                                            // Now create an <b> element:
+                                            let b1 = document.createElement('div');
+                                            let b2 = document.createElement('div');
+
+                                            b1.style.color = 'white';
+                                            b2.style.color = 'white';
+
+                                            b1.style.fontSize = "10px";b2.style.fontSize = "10px";
+                                            
+                                        
+                                            b1.style.position = 'absolute';
+                                            b2.style.position = 'absolute';
+
+                                            b1.style.left = '15px';
+                                            b2.style.right = '15px';
+
+                                            b1.innerText = track_list[index].name; 
+                                            b2.innerText = track_list[index].artist;
+
+                                            // Now add the <a> to the <li>, and add the <li> to the <ul>
+                                            li.appendChild(b1);
+                                            li.appendChild(b2);
+                                            li.style.width = '275px';
+                                            myList.appendChild(li);
+                                                
+                                        $('ul li').click(function () {
+                                            //loadTrack($(this).index()+1);
+                                            loadTrack(index);
+                                            playTrack();
+                                        });
+                
+               })
+        }
+        //----------------------
+        //----------------------
         function seekUpdate() {
             var seekPosition = 0;
         let curr_time = document.querySelector(".current-time");
@@ -173,66 +221,18 @@
                 if (!birkerecalisti) {
                  console.log("liste parselleme başarılı");
 
-                $(xml).find('ul').find('li').each(function(){
+                  $(xml).find('ul').find('li').each(function(){
                     
                   track_list.push({ name: $(this).attr("data-title"), artist: $(this).attr("data-duration"), image: "http://kardelendergisi.com/atesiask/images/yeni77.jpg", path: $(this).attr("data-path") });
                 
-                })
+                  })
 
-                track_list = track_list.reverse();
-                
-               $.each(track_list, function (index) {
-                    // The <ul> that we will add <li> elements to:
-                                            let myList = document.querySelector('ul#parca-listesi');
-
-                                            // Create an <li> element:
-                                            let li = document.createElement('li');
-
-                                            // Give it the desired classes & attributes:
-                                            li.classList.add('list-group-item');
-                                            li.style.minHeight = '30px';
-                                            li.style.background = 'black';
-
-                                            // Now create an <b> element:
-                                            let b1 = document.createElement('div');
-                                            let b2 = document.createElement('div');
-
-                                            b1.style.color = 'white';
-                                            b2.style.color = 'white';
-
-                                            b1.style.fontSize = "10px";b2.style.fontSize = "10px";
-                                            
-                                        
-                                            b1.style.position = 'absolute';
-                                            b2.style.position = 'absolute';
-
-                                            b1.style.left = '15px';
-                                            b2.style.right = '15px';
-
-                                            b1.innerText = track_list[index].name; 
-                                            b2.innerText = track_list[index].artist;
-
-                                            // Now add the <a> to the <li>, and add the <li> to the <ul>
-                                            li.appendChild(b1);
-                                            li.appendChild(b2);
-                                            li.style.width = '275px';
-                                            myList.appendChild(li);
-                        
-                                //resimler.push({ name: $(this).attr("data-title"), artist: $(this).attr("data-duration"), image: "http://kardelendergisi.com/atesiask/images/yeni77.jpg", path: $(this).attr("data-path") });
-                        
-                                        $('ul li').click(function () {
-                                            //loadTrack($(this).index()+1);
-                                            loadTrack(index);
-                                            playTrack();
-                                        });
-                
-               })
-                                
-                              
-                              ilk_parcayi_ayarlar();
-                              konsola_yaz("liste uzunluğu", ': ' + track_list.length);
-                              birkerecalisti=true;
-                              }
+                  track_list = track_list.reverse();
+                  setListview()
+                  ilk_parcayi_ayarlar();
+                  konsola_yaz("liste uzunluğu", ': ' + track_list.length);
+                  birkerecalisti=true;
+                }
               },
               error: function(status) {
                console.log("request error:");
