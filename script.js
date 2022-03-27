@@ -260,37 +260,11 @@
 //----------------------
 //==============================================================================================
     //Resimleri Getirir
-        var birkerecalisti_resim=false;
-        $.ajax({
-            url: './images.html',
-            type: 'GET',
-            dataType: "html",
-            success: function (html) {
-                console.log("images parselleme başarılı");
-                
-                   html= html.replaceAll('<html data-kantu="1"><head></head><body>//Display Images From A Folder with PHP', '')
-                   html= html.replaceAll('<img src=', '')
-                   html= html.replaceAll('>&nbsp;&nbsp;', '')
-                   html= html.replaceAll('\n', '')
+        var adres1="https://raw.githubusercontent.com/emreaksel/askatesi/main/img/";
+        var imageadres = ["026.jpg", "051x.jpg", "131-bali-indonesia.jpg"];
+        //$("#bg").attr("src", "/login_images/" + list_images[Math.floor(Math.random() * list_images.length)]);
+        $("#bg").attr("src", adres1+imageadres[0]);
 
-                    var resimler = html.split('alt="random image');
-                  
-                    for (var i = 0, len = resimler.length; i < len; i++) {
-                             if (resimler[i].replaceAll('"', '').includes(".jpg")) {
-                                     var foto=resimler[i].replaceAll('"', '').replaceAll(' ', '');
-                                list_images.push("http://kardelendergisi.com/atesiask/images/" + foto);
-                                //console.log("images: "+list_images[list_images.length-1]);
-                             }
-                    }
-                  
-                //setImage();
-                birkerecalisti_resim=true;
-                konsola_yaz("Fotoğraflar Hazırlandı", "Fotoğraf adedi:" + list_images.length)
-            },
-            error: function () {
-                konsola_yaz("Hata","Fotoğraflar Gelmedi")
-            }
-        });
     //==============================================================================================
 console.log("adresin yeri: " + window.location.href);
 
