@@ -1,5 +1,5 @@
         //merhabalar :)
-        konsola_yaz("Debug", ' Denemeler: ' + 52);
+        konsola_yaz("Debug", ' Denemeler: ' + 53);
 
         var track_index = 0;
         var isPlaying = false;
@@ -170,19 +170,19 @@
               type: "GET",
               dataType: "xml",
               success: function(xml) {
-                      if (!birkerecalisti) {
-                               console.log("liste parselleme başarılı");
+                if (!birkerecalisti) {
+                 console.log("liste parselleme başarılı");
 
-                                var counter = 0;
-                                $(xml).find('ul').find('li').each(function(){
-                                  // Only do it for the first 5 elements of .kltat class
-                                   if (counter==3000) {
-                                     return false;
-                                   } else {
-                                     counter++;
-                                   }
-                        
-                                                // The <ul> that we will add <li> elements to:
+                $(xml).find('ul').find('li').each(function(){
+                    
+                  track_list.push({ name: $(this).attr("data-title"), artist: $(this).attr("data-duration"), image: "http://kardelendergisi.com/atesiask/images/yeni77.jpg", path: $(this).attr("data-path") });
+                
+                })
+
+                track_list = track_list.reverse();
+                
+               $.each(track_list, function (index) {
+                    // The <ul> that we will add <li> elements to:
                                             let myList = document.querySelector('ul#parca-listesi');
 
                                             // Create an <li> element:
@@ -209,8 +209,8 @@
                                             b1.style.left = '15px';
                                             b2.style.right = '15px';
 
-                                            b1.innerText = $(this).attr("data-title"); 
-                                            b2.innerText = $(this).attr("data-duration");
+                                            b1.innerText = track_list[index].name; 
+                                            b2.innerText = track_list[index].artist;
 
                                             // Now add the <a> to the <li>, and add the <li> to the <ul>
                                             li.appendChild(b1);
@@ -218,16 +218,17 @@
                                             li.style.width = '275px';
                                             myList.appendChild(li);
                         
-                                resimler.push({ name: $(this).attr("data-title"), artist: $(this).attr("data-duration"), image: "http://kardelendergisi.com/atesiask/images/yeni77.jpg", path: $(this).attr("data-path") });
+                                //resimler.push({ name: $(this).attr("data-title"), artist: $(this).attr("data-duration"), image: "http://kardelendergisi.com/atesiask/images/yeni77.jpg", path: $(this).attr("data-path") });
                         
                                         $('ul li').click(function () {
-                                            loadTrack($(this).index()+1);
+                                            //loadTrack($(this).index()+1);
+                                            loadTrack(index+1);
                                             playTrack();
                                         });
-                       
-                                 });
+                
+               })
+                                
                               
-                              track_list=resimler.reverse();
                               ilk_parcayi_ayarlar();
                               konsola_yaz("liste uzunluğu", ': ' + track_list.length);
                               birkerecalisti=true;
