@@ -1,5 +1,5 @@
         //merhabalar :)
-        konsola_yaz("Debug", ' Denemeler: ' + 47);
+        konsola_yaz("Debug", ' Denemeler: ' + 48);
 
         var track_index = 0;
         var isPlaying = false;
@@ -251,6 +251,7 @@
                                 }
                               konsola_yaz("nukte uzunluğu", ': ' + list_nukte.length);
                               setNukte();
+                              setImage()
                               birkerecalisti_nukte=true;
                       }
               },
