@@ -1,5 +1,5 @@
         //merhabalar :)
-        konsola_yaz("Debug", ' Denemeler: ' + 50);
+        konsola_yaz("Debug", ' Denemeler: ' + 51);
 
         var track_index = 0;
         var isPlaying = false;
@@ -226,7 +226,7 @@
                        
                                  });
                               
-                              track_list = track_list.reverse();
+                              track_list.reverse();
                               ilk_parcayi_ayarlar();
                               konsola_yaz("liste uzunluğu", ': ' + track_list.length);
                               birkerecalisti=true;
