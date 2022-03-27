@@ -129,7 +129,11 @@ html {
   -webkit-transition: background-image .2s ease-in-out;
   transition: background-image .2s ease-in-out;
 }
-
+#resim {
+  width: 275px;
+  height: 220px;
+ 
+}
 .no_album_img {
   width: 150px;
   height: 150px;
