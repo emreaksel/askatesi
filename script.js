@@ -1,5 +1,5 @@
         //merhabalar :)
-        konsola_yaz("Debug", ' Denemeler: ' + 46);
+        konsola_yaz("Debug", ' Denemeler: ' + 47);
 
         var track_index = 0;
         var isPlaying = false;
@@ -89,7 +89,8 @@
         //----------------------
         //----------------------
         function setImage() {
-            $("#resim").attr("src", list_images[Math.floor(Math.random() * list_images.length)]);
+                var adres1="https://raw.githubusercontent.com/emreaksel/askatesi/main/img/";
+            $("#resim").attr("src", adres1+list_images[Math.floor(Math.random() * list_images.length)]);
         }
         //----------------------
         //----------------------
@@ -260,10 +261,25 @@
 //----------------------
 //==============================================================================================
     //Resimleri Getirir
-        var adres1="https://raw.githubusercontent.com/emreaksel/askatesi/main/img/";
-        var imageadres = ["026.jpg", "051x.jpg", "131-bali-indonesia.jpg"];
-        //$("#bg").attr("src", "/login_images/" + list_images[Math.floor(Math.random() * list_images.length)]);
-        $("#resim").attr("src", adres1+imageadres[0]);
+        list_images = ['026.jpg' , '051x.jpg' , '131-bali-indonesia.jpg' , '1929.jpg' , '27nisan_1.jpg' , '27nisan_2.jpg' , '27nisan_4.jpg' , '28n1.jpg' 
+                          , '28n2.jpg' , '28n_3.jpg' , '29n_4.jpg' , '43-tuscay-italy.jpg' , '5m_1.jpg' , '5m_2.jpg' , '5m_3.jpg' , '5m_4.jpg' , '5m_5.jpg' 
+                          , '5m_6.jpg' , 'adada.jpg' , 'aga.jpg' , 'aksa2.jpg' , 'ankara2.jpg' , 'antalya_1.jpg' , 'atesi_ask.jpg' , 'atesiask_fon.jpg' , 'aya1.jpg' 
+                          , 'ayc.jpg' , 'aynali.jpg' , 'aynali_gol.jpg' , 'bahar.jpg' , 'bakakal.jpg' , 'baska_kabe.jpg' , 'bastankara.jpg' , 'bayrak.jpg' , 'beach.jpg' 
+                          , 'beach18.jpg' , 'beyazkus.jpg' , 'blueyes.jpg' , 'buhara_2.jpg' , 'cadir.jpg' , 'cave1.jpg' , 'cave2.jpg' , 'cemaat.jpg' , 'cicek_kedi.jpg' 
+                          , 'dalgada.jpg' , 'deniz.jpg' , 'deniz1.jpg' , 'dev.jpg' , 'dm1.jpg' , 'dunya1.jpg' , 'ekmek.jpg' , 'entrance.jpg' , 'ernst1.jpg' , 'eski_kapi.jpg' 
+                          , 'fas.jpg' , 'flower_field.jpg' , 'gel_artik.jpg' , 'genesi.jpg' , 'gerome.jpg' , 'giris_kapisi.jpg' , 'gizemliyol.jpg' , 'golde.jpg' , 'golkenari.jpg' 
+                          , 'golyeni.jpg' , 'gravur1.jpg' , 'greece.jpg' , 'greece1.jpg' , 'gul1.jpg' , 'gunbatimi.jpg' , 'gunebakanz.jpg' , 'gunes11.jpg' , 'gustav.jpg' 
+                          , 'guvercin.jpg' , 'halasultan.jpg' , 'havai.jpg' , 'hayber.jpg' , 'hiclik.jpg' , 'highland.jpg' , 'hira.jpg' , 'hirvatistan.jpg' , 'hu_golge.jpg' 
+                          , 'huseyin_kutlu.jpg' , 'huzur.jpg' , 'huzurupir.jpg' , 'icerde.jpg' , 'iki_kayik.jpg' , 'ilkbahar.jpg' , 'insanbu.jpg' , 'iskele.jpg' , 'istanbulx.jpg' 
+                          , 'j_gence.jpg' , 'java.jpg' , 'kab1.jpg' , 'kab2.jpg' , 'kab3.jpg' , 'kab4.jpg' , 'kabe1.jpg' , 'kabe1_1.jpg' , 'kabe_bos.jpg' , 'kabe_ortu_1.jpg' 
+                          , 'kabe_yeni1.jpg' , 'kabe_yeni2.jpg' , 'kabe_zoom.jpg' , 'kapi_kabe.jpg' , 'karadeniz.jpg' , 'karcicek.jpg' , 'karjini.jpg' , 'karli_tren.jpg' , 'karwat1.jpg' 
+                          , 'kayik_1.jpg' , 'kayikci.jpg' , 'kb1.jpg' , 'kenya.jpg' , 'kirkpinar.jpg' , 'kis.jpg' , 'kizkulesi.jpg' , 'kizkulesi_1.jpg' , 'kus1.jpg' , 'kus2.jpg' 
+                          , 'kus3.jpg' , 'kuslara_serbest.jpg' , 'kuslara_serbest2.jpg' , 'lamba.jpg' , 'leylekler.jpg' , 'magara1.jpg' , 'mak_ibrahim.jpg' , 'makepeace.jpg' 
+                          , 'maldiv1.jpg' , 'maldiv2.jpg' , 'malibu.jpg' , 'man1.jpg' , 'mavi.jpg' , 'mavilim.jpg' , 'medine_cuma_1.jpg' , 'mekke_uzay_1.jpg' , 'minim.jpg' 
+                          , 'misir.jpg' , 'mjgr.jpg' , 'mobile_atesiask.jpg' , 'muhabbetle2.jpg' , 'muharrem_1.jpg' , 'mutlu.jpg' , 'nezihbabax.jpg' , 'orient1.jpg' , 'orient2.jpg' 
+                          , 'ory1.jpg' , 'ory2.jpg' , 'ory3.jpg' , 'ory4.jpg' , 'osmanhamdi.jpg' , 'park1.jpg' , 'park10.jpg' , 'park11.jpg' , 'park2.jpg' , 'park3.jpg' , 'pencere.jpg' 
+                          , 'perde2.jpg'
+                         ];
 
     //==============================================================================================
 console.log("adresin yeri: " + window.location.href);
