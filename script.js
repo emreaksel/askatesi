@@ -263,7 +263,7 @@
         var adres1="https://raw.githubusercontent.com/emreaksel/askatesi/main/img/";
         var imageadres = ["026.jpg", "051x.jpg", "131-bali-indonesia.jpg"];
         //$("#bg").attr("src", "/login_images/" + list_images[Math.floor(Math.random() * list_images.length)]);
-        $("#bg").attr("src", adres1+imageadres[0]);
+        $("#resim").attr("src", adres1+imageadres[0]);
 
     //==============================================================================================
 console.log("adresin yeri: " + window.location.href);
