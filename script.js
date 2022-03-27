@@ -1,5 +1,5 @@
         //merhabalar :)
-        konsola_yaz("Debug", ' Denemeler: ' + 51);
+        konsola_yaz("Debug", ' Denemeler: ' + 52);
 
         var track_index = 0;
         var isPlaying = false;
@@ -164,6 +164,7 @@
 
     //==============================================================================================
        var birkerecalisti=false;
+       var resimler = new Array();
           $.ajax({
               url: "/baska.xml",
               type: "GET",
@@ -217,7 +218,7 @@
                                             li.style.width = '275px';
                                             myList.appendChild(li);
                         
-                                track_list.push({ name: $(this).attr("data-title"), artist: $(this).attr("data-duration"), image: "http://kardelendergisi.com/atesiask/images/yeni77.jpg", path: $(this).attr("data-path") });
+                                resimler.push({ name: $(this).attr("data-title"), artist: $(this).attr("data-duration"), image: "http://kardelendergisi.com/atesiask/images/yeni77.jpg", path: $(this).attr("data-path") });
                         
                                         $('ul li').click(function () {
                                             loadTrack($(this).index()+1);
@@ -226,7 +227,7 @@
                        
                                  });
                               
-                              track_list.reverse();
+                              track_list=resimler.reverse();
                               ilk_parcayi_ayarlar();
                               konsola_yaz("liste uzunluğu", ': ' + track_list.length);
                               birkerecalisti=true;
