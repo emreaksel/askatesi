@@ -133,7 +133,7 @@ function checkTouchScreen() {
     $('body').removeClass('touch-screen');
     return false;
   }
-}
+
 */
-  
+}  
 //https://codepen.io/MichaelMammoliti/pen/VYEWZg
