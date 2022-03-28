@@ -30,6 +30,8 @@ $(document).ready(function() {
     })
   })();
   
+  */
+  
 
   (function() {
     $('.hamburger-menu').on('click', function() {
@@ -63,6 +65,8 @@ $(document).ready(function() {
     })
   })();
 
+  /*
+  
   // отменить выделение текста
   function preventSelection(element) {
     var preventSelection = false;
