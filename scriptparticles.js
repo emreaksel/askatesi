@@ -12,7 +12,7 @@ $(document).ready(function() {
       console.log(AP.getTrack(trackPlaying.attr("data-track")));
     });
   });
-
+/*
   (function() {
     $('.back_btn').on('click', function() {
       $('.player_playlist').toggleClass('playlist_on');
@@ -29,6 +29,7 @@ $(document).ready(function() {
       $('.line_preload').toggleClass('line_preload_up');
     })
   })();
+  
 
   (function() {
     $('.hamburger-menu').on('click', function() {
@@ -43,9 +44,9 @@ $(document).ready(function() {
   (function() {
     $('.play_btn').on('click', function() {
       $('#play_circle').toggleClass('glyphicon-play').toggleClass('glyphicon-pause');
-      $('#npAction').text(function(i, text) {
-        return text === "PAUSED..." ? "NOW PLAYING" : "PAUSED...";
-      })
+      //$('#npAction').text(function(i, text) {
+        //return text === "PAUSED..." ? "NOW PLAYING" : "PAUSED...";
+      //})
     })
   })();
 
@@ -133,4 +134,6 @@ function checkTouchScreen() {
     return false;
   }
 }
+*/
+  
 //https://codepen.io/MichaelMammoliti/pen/VYEWZg
