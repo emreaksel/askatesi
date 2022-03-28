@@ -1,5 +1,5 @@
         //merhabalar :)
-        konsola_yaz("Debug", ' Denemeler: ' + 56);
+        konsola_yaz("Debug", ' Denemeler: ' + 57);
 
         var track_index = 0;
         var isPlaying = false;
@@ -38,13 +38,13 @@
         function playTrack() {
             curr_track.play();
             isPlaying = true;
-            $('#play_circle').toggleClass('glyphicon-pause').toggleClass('glyphicon-play');
+            $('#play_circle').toggleClass('change_me glyphicon-play');
         }
         //----------------------
         function pauseTrack() {
             curr_track.pause();
             isPlaying = false;
-            $('#play_circle').toggleClass('glyphicon-play').toggleClass('glyphicon-pause');
+            $('#play_circle').toggleClass('change_me glyphicon-pause');
         }
         //----------------------
         function nextTrack() {
