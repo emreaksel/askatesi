@@ -12,7 +12,7 @@ $(document).ready(function() {
       console.log(AP.getTrack(trackPlaying.attr("data-track")));
     });
   });
-/*
+
   (function() {
     $('.back_btn').on('click', function() {
       $('.player_playlist').toggleClass('playlist_on');
@@ -30,9 +30,6 @@ $(document).ready(function() {
     })
   })();
   
-  */
-  
-
   (function() {
     $('.hamburger-menu').on('click', function() {
       $('.bar').toggleClass('animate');
