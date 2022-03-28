@@ -123,6 +123,8 @@ $(document).ready(function() {
     addHandler(element, 'keyup', killCtrlA);
   }
   preventSelection(document);
+  
+ */ 
 });
 
 function checkTouchScreen() {
@@ -133,7 +135,5 @@ function checkTouchScreen() {
     $('body').removeClass('touch-screen');
     return false;
   }
-
-*/
 }  
 //https://codepen.io/MichaelMammoliti/pen/VYEWZg
