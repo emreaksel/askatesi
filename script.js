@@ -1,5 +1,5 @@
         //merhabalar :)
-        konsola_yaz("Debug", ' Denemeler: ' + 61);
+        konsola_yaz("Debug", ' Denemeler: ' + 63);
 
         var track_index = 0;
         var isPlaying = false;
@@ -181,7 +181,7 @@
           if (parselle.includes("?")) {
               console.log("paylaşılan bir parça okundu: " + "true");
             parselle=parselle.replace('https://atesiask.netlify.app/?', '');
-            const bilgi = parselle.split("\");
+            var bilgi = parselle.split("\");
                                          
             var url="https://www.mediafire.com/"+bilgi[0]+".mp3";
             var ad=bilgi[1];
