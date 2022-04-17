@@ -15,6 +15,7 @@
         //Nukte Listesi
         var list_nukte = new Array();
         // parça listesi
+        var track_list = new Array();
         //var track_list = [
         //    {
         //        name: "Ey Ademoğlu",
