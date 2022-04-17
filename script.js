@@ -271,8 +271,92 @@
                console.log("request error:");
               }
           });
+
+console.log("adresin yeri: " + window.location.href);
 //----------------------
 //==============================================================================================
-   
-console.log("adresin yeri: " + window.location.href);
+//==============================================================================================
+//==============================================================================================
 
+
+
+$(window).on('load', function() { // makes sure the whole site is loaded 
+  $('#status').fadeOut(); // will first fade out the loading animation 
+  $('#preloader').delay(500).fadeOut('slow'); // will fade out the white DIV that covers the website. 
+  checkTouchScreen();
+});
+
+$(document).ready(function() {
+  
+  $(document).ready(function() {
+    $(".pl-list__download").on("click", function() {
+      var trackPlaying = $(this).closest(".pl-list");
+      console.log(AP.getTrack(trackPlaying.attr("data-track")));
+    });
+  });
+
+  (function() {
+    $('.back_btn').on('click', function() {
+      listbutton();
+    })
+  })();
+  
+  (function() {
+    $('.hamburger-menu').on('click', function() {
+      $('.bar').toggleClass('animate');
+      $('.hamburger-menu').toggleClass('slide');
+      $('.back_btn').toggleClass('slide');
+      $('.nav_menu').toggleClass('open');
+      $('.player_fade').toggleClass('player_fade_on');
+    })
+  })();
+
+  (function() {
+    $('.play_btn').on('click', function() {
+      $('#play_circle').toggleClass('glyphicon-play').toggleClass('glyphicon-pause');
+      //$('#npAction').text(function(i, text) {
+        //return text === "PAUSED..." ? "NOW PLAYING" : "PAUSED...";
+      //})
+    })
+  })();
+
+  (function() {
+    $('.random_btn').on('click', function() {
+      $('.random_btn').toggleClass('random_btn_on');
+    })
+  })();
+
+  (function() {
+    $('.repeat_btn').on('click', function() {
+      $('.repeat_btn').toggleClass('repeat_btn_on');
+
+    })
+  })();
+
+  function listbutton(){
+      $('.player_playlist').toggleClass('playlist_on');
+      $('.glyphicon-menu-left').toggleClass('back_btn_on');
+      $('.waves').toggleClass('waves_up');
+      $('.album_wrap').toggleClass('album_up');
+      $('.song_playing').toggleClass('song_playing_up');
+      $('.timeline_wrap').toggleClass('timeline_wrap_up');
+      $('.player_btns').toggleClass('player_btns_up');
+      $('.line_played').toggleClass('line_played_up');
+      $('.full_line').toggleClass('full_line_up');
+      $('.time_of_song').toggleClass('time_of_song_up');
+      $('.progress-bar-pointer').toggleClass('progress-bar-pointer_up');
+      $('.line_preload').toggleClass('line_preload_up');
+  }
+  
+});
+
+function checkTouchScreen() {
+  if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+    $('body').addClass('touch-screen');
+    return true;
+  } else {
+    $('body').removeClass('touch-screen');
+    return false;
+  }
+}  
+//https://codepen.io/MichaelMammoliti/pen/VYEWZg
