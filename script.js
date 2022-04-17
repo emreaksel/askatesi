@@ -1,5 +1,5 @@
         //merhabalar :)
-        konsola_yaz("Debug", ' Denemeler: ' + 65);
+        konsola_yaz("Debug", ' Denemeler: ' + 66);
 
         var track_index = 0;
         var isPlaying = false;
@@ -181,19 +181,15 @@
           if (parselle.includes("?")) {
               console.log("paylaşılan bir parça okundu: " + "true");
             parselle=parselle.replace('https://atesiask.netlify.app/?', '');
-            var bilgi = parselle.split("--");
-                                         
             var url="https://www.mediafire.com/"+bilgi[0]+".mp3";
-            var ad=bilgi[1];
-            var ses=bilgi[2];
+            
               console.log("parselli url: " + url);
-              console.log("ad: " + ad);
-              console.log("ses: " + ses);
-              track_list.push({ name: ad, 
-                               artist: ses, 
+              
+              track_list.push({ name: "", 
+                               artist: "", 
                                image: "http://kardelendergisi.com/atesiask/images/yeni77.jpg", 
                                path: url });
-              loadTrack(track_list.lenght-1);
+              loadTrack(1);
           } else {
               track_index = Math.floor(Math.random() * track_list.length);
               loadTrack(track_index);
