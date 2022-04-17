@@ -1,5 +1,5 @@
         //merhabalar :)
-        konsola_yaz("Debug", ' Denemeler: ' + 70);
+        konsola_yaz("Debug", ' Denemeler: ' + 71);
 
         var track_index = 0;
         var isPlaying = false;
@@ -190,7 +190,7 @@
              
             console.log("dinleme listesi: " + din);
             console.log("parça id: " + id);
-            loadTrack(track_list.length-id);
+            loadTrack(track_list.length-id-1);
           } else {
               track_index = Math.floor(Math.random() * track_list.length);
               loadTrack(track_index);
