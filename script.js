@@ -1,5 +1,5 @@
         //merhabalar :)
-        konsola_yaz("Debug", ' Denemeler: ' + 69);
+        konsola_yaz("Debug", ' Denemeler: ' + 70);
 
         var track_index = 0;
         var isPlaying = false;
@@ -15,16 +15,16 @@
         //Nukte Listesi
         var list_nukte = new Array();
         // parça listesi
-        var track_list = [
-            {
-                name: "Ey Ademoğlu",
-                artist: "K. Eroglu",
-                image: "http://kardelendergisi.com/atesiask/images/yeni257.jpg",
-                path: "https://www.mediafire.com/download/rjv71inh44win4c/eyademoglu_keroglu.mp3"
-                //https://www.mediafire.com/file/wame8e6p9gwuqu6/mededya
-                //path: "https://www.mediafire.com/download/rjvwin4c/eyademoglu_keroglu.mp3"
-            },
-        ];
+        //var track_list = [
+        //    {
+        //        name: "Ey Ademoğlu",
+        //        artist: "K. Eroglu",
+        //        image: "http://kardelendergisi.com/atesiask/images/yeni257.jpg",
+        //        path: "https://www.mediafire.com/download/rjv71inh44win4c/eyademoglu_keroglu.mp3"
+        //        //https://www.mediafire.com/file/wame8e6p9gwuqu6/mededya
+        //        //path: "https://www.mediafire.com/download/rjvwin4c/eyademoglu_keroglu.mp3"
+        //    },
+        //];
         //----------------------
         curr_track.onended = function () {
                 nextTrack();
