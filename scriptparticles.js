@@ -1,4 +1,4 @@
- /*
+ 
 $(window).on('load', function() { // makes sure the whole site is loaded 
   $('#status').fadeOut(); // will first fade out the loading animation 
   $('#preloader').delay(500).fadeOut('slow'); // will fade out the white DIV that covers the website. 
@@ -67,7 +67,7 @@ $(document).ready(function() {
       $('.line_preload').toggleClass('line_preload_up');
   }
  
-  
+  /*
   // отменить выделение текста
   function preventSelection(element) {
     var preventSelection = false;
@@ -129,7 +129,7 @@ $(document).ready(function() {
   }
   preventSelection(document);
   
- 
+ */ 
 });
 
 function checkTouchScreen() {
@@ -140,5 +140,5 @@ function checkTouchScreen() {
     $('body').removeClass('touch-screen');
     return false;
   }
-}  */ 
+}  
 //https://codepen.io/MichaelMammoliti/pen/VYEWZg
