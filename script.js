@@ -1,10 +1,10 @@
         //merhabalar :)
-        konsola_yaz("Debug", ' Denemeler: ' + 75);
+        konsola_yaz("Debug", ' Denemeler: ' + 76);
 
 
 //==============================================================================================
 //==============================================================================================
-$(document).ready(function() {
+
         $('.back_btn').on('click', function() {
               listbutton();
         });
@@ -37,7 +37,7 @@ $(document).ready(function() {
           $('#preloader').delay(500).fadeOut('slow'); // will fade out the white DIV that covers the website. 
           checkTouchScreen();
         });
-});
+
 
 function listbutton(){
       $('.player_playlist').toggleClass('playlist_on');
