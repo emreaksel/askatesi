@@ -1,5 +1,5 @@
         //merhabalar :)
-        konsola_yaz("Debug", ' Denemeler: ' + 73);
+        konsola_yaz("Debug", ' Denemeler: ' + 74);
 
         var track_index = 0;
         var isPlaying = false;
@@ -277,7 +277,9 @@ console.log("adresin yeri: " + window.location.href);
 //==============================================================================================
 //==============================================================================================
 //==============================================================================================
-
+$('.back_btn').on('click', function() {
+      listbutton();
+});
 
 
 $(window).on('load', function() { // makes sure the whole site is loaded 
@@ -296,9 +298,7 @@ $(document).ready(function() {
   });
 
   (function() {
-    $('.back_btn').on('click', function() {
-      listbutton();
-    })
+    
   })();
   
   (function() {
@@ -329,11 +329,13 @@ $(document).ready(function() {
   (function() {
     $('.repeat_btn').on('click', function() {
       $('.repeat_btn').toggleClass('repeat_btn_on');
-
     })
   })();
 
-  function listbutton(){
+  
+  
+});
+function listbutton(){
       $('.player_playlist').toggleClass('playlist_on');
       $('.glyphicon-menu-left').toggleClass('back_btn_on');
       $('.waves').toggleClass('waves_up');
@@ -347,69 +349,6 @@ $(document).ready(function() {
       $('.progress-bar-pointer').toggleClass('progress-bar-pointer_up');
       $('.line_preload').toggleClass('line_preload_up');
   }
-  /*
-  
-  // отменить выделение текста
-  function preventSelection(element) {
-    var preventSelection = false;
-    function addHandler(element, event, handler) {
-      if (element.attachEvent)
-        element.attachEvent('on' + event, handler);
-      else
-      if (element.addEventListener)
-        element.addEventListener(event, handler, false);
-    }
-    function removeSelection() {
-      if (window.getSelection) {
-        window.getSelection().removeAllRanges();
-      } else if (document.selection && document.selection.clear)
-        document.selection.clear();
-    }
-    function killCtrlA(event) {
-      var event = event || window.event;
-      var sender = event.target || event.srcElement;
-      if (sender.tagName.match(/INPUT|TEXTAREA/i))
-        return;
-      var key = event.keyCode || event.which;
-      if (event.ctrlKey && key == 'A'.charCodeAt(0)) // 'A'.charCodeAt(0) можно заменить на 65
-      {
-        removeSelection();
-        if (event.preventDefault)
-          event.preventDefault();
-        else
-          event.returnValue = false;
-      }
-    }
-    // не даем выделять текст мышкой
-    addHandler(element, 'mousemove', function() {
-      if (preventSelection)
-        removeSelection();
-    });
-    addHandler(element, 'mousedown', function(event) {
-      var event = event || window.event;
-      var sender = event.target || event.srcElement;
-      preventSelection = !sender.tagName.match(/INPUT|TEXTAREA/i);
-    });
-    // борем dblclick
-    // если вешать функцию не на событие dblclick, можно избежать
-    // временное выделение текста в некоторых браузерах
-    addHandler(element, 'mouseup', function() {
-      if (preventSelection)
-        removeSelection();
-      preventSelection = false;
-    });
-    // борем ctrl+A
-    // скорей всего это и не надо, к тому же есть подозрение
-    // что в случае все же такой необходимости функцию нужно 
-    // вешать один раз и на document, а не на элемент
-    addHandler(element, 'keydown', killCtrlA);
-    addHandler(element, 'keyup', killCtrlA);
-  }
-  preventSelection(document);
-  
- */ 
-});
-
 function checkTouchScreen() {
   if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
     $('body').addClass('touch-screen');
