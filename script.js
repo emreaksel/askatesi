@@ -1,5 +1,5 @@
         //merhabalar :)
-        konsola_yaz("Debug", ' Denemeler: ' + 67);
+        konsola_yaz("Debug", ' Denemeler: ' + 68);
 
         var track_index = 0;
         var isPlaying = false;
@@ -189,7 +189,7 @@
                                artist: "", 
                                image: "http://kardelendergisi.com/atesiask/images/yeni77.jpg", 
                                path: url });
-              loadTrack(1);
+              loadTrack(0);
           } else {
               track_index = Math.floor(Math.random() * track_list.length);
               loadTrack(track_index);
