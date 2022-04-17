@@ -1,5 +1,5 @@
         //merhabalar :)
-        konsola_yaz("Debug", ' Denemeler: ' + 71);
+        konsola_yaz("Debug", ' Denemeler: ' + 72);
 
         var track_index = 0;
         var isPlaying = false;
@@ -137,6 +137,7 @@
                                             loadTrack($(this).index());
                                             //loadTrack(index);
                                             playTrack();
+                                            listbutton();
                                         });
                 
                })
