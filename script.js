@@ -181,14 +181,19 @@
           if (parselle.includes("?")) {
               console.log("paylaşılan bir parça okundu: " + "true");
             parselle=parselle.replace('https://atesiask.netlify.app/?', '');
-            var url="https://www.mediafire.com/"+parselle+".mp3";
+            const bilgi = parselle.split("\");
+                                         
+            var url="https://www.mediafire.com/"+bilgi[0]+".mp3";
+            var ad=bilgi[1];
+            var ses=bilgi[2];
               console.log("parselli url: " + url);
-              track_list.push({ name: "Meded", 
-                               artist: "Gavs", 
+              console.log("ad: " + ad);
+              console.log("ses: " + ses);
+              track_list.push({ name: ad, 
+                               artist: ses, 
                                image: "http://kardelendergisi.com/atesiask/images/yeni77.jpg", 
                                path: url });
-              curr_track.src = track_list[track_list.length-1].path; 
-              curr_track.load();
+              loadTrack(track_index.lenght-1);
           } else {
               track_index = Math.floor(Math.random() * track_list.length);
               loadTrack(track_index);
