@@ -1,5 +1,5 @@
         //merhabalar :)
-        konsola_yaz("Debug", ' Denemeler: ' + 74);
+        konsola_yaz("Debug", ' Denemeler: ' + 75);
 
         var track_index = 0;
         var isPlaying = false;
@@ -277,64 +277,41 @@ console.log("adresin yeri: " + window.location.href);
 //==============================================================================================
 //==============================================================================================
 //==============================================================================================
-$('.back_btn').on('click', function() {
-      listbutton();
-});
-
-
-$(window).on('load', function() { // makes sure the whole site is loaded 
-  $('#status').fadeOut(); // will first fade out the loading animation 
-  $('#preloader').delay(500).fadeOut('slow'); // will fade out the white DIV that covers the website. 
-  checkTouchScreen();
-});
-
 $(document).ready(function() {
-  
-  $(document).ready(function() {
-    $(".pl-list__download").on("click", function() {
-      var trackPlaying = $(this).closest(".pl-list");
-      console.log(AP.getTrack(trackPlaying.attr("data-track")));
-    });
-  });
+        $('.back_btn').on('click', function() {
+              listbutton();
+        });
+        $(".pl-list__download").on("click", function() {
+              var trackPlaying = $(this).closest(".pl-list");
+              console.log(AP.getTrack(trackPlaying.attr("data-track")));
+        });
+        $('.hamburger-menu').on('click', function() {
+              $('.bar').toggleClass('animate');
+              $('.hamburger-menu').toggleClass('slide');
+              $('.back_btn').toggleClass('slide');
+              $('.nav_menu').toggleClass('open');
+              $('.player_fade').toggleClass('player_fade_on');
+        });
+        $('.play_btn').on('click', function() {
+              $('#play_circle').toggleClass('glyphicon-play').toggleClass('glyphicon-pause');
+              //$('#npAction').text(function(i, text) {
+                //return text === "PAUSED..." ? "NOW PLAYING" : "PAUSED...";
+              //})
+        });
+        $('.random_btn').on('click', function() {
+              $('.random_btn').toggleClass('random_btn_on');
+        });
+        $('.repeat_btn').on('click', function() {
+              $('.repeat_btn').toggleClass('repeat_btn_on');
+        });
 
-  (function() {
-    
-  })();
-  
-  (function() {
-    $('.hamburger-menu').on('click', function() {
-      $('.bar').toggleClass('animate');
-      $('.hamburger-menu').toggleClass('slide');
-      $('.back_btn').toggleClass('slide');
-      $('.nav_menu').toggleClass('open');
-      $('.player_fade').toggleClass('player_fade_on');
-    })
-  })();
-
-  (function() {
-    $('.play_btn').on('click', function() {
-      $('#play_circle').toggleClass('glyphicon-play').toggleClass('glyphicon-pause');
-      //$('#npAction').text(function(i, text) {
-        //return text === "PAUSED..." ? "NOW PLAYING" : "PAUSED...";
-      //})
-    })
-  })();
-
-  (function() {
-    $('.random_btn').on('click', function() {
-      $('.random_btn').toggleClass('random_btn_on');
-    })
-  })();
-
-  (function() {
-    $('.repeat_btn').on('click', function() {
-      $('.repeat_btn').toggleClass('repeat_btn_on');
-    })
-  })();
-
-  
-  
+        $(window).on('load', function() { // makes sure the whole site is loaded 
+          $('#status').fadeOut(); // will first fade out the loading animation 
+          $('#preloader').delay(500).fadeOut('slow'); // will fade out the white DIV that covers the website. 
+          checkTouchScreen();
+        });
 });
+
 function listbutton(){
       $('.player_playlist').toggleClass('playlist_on');
       $('.glyphicon-menu-left').toggleClass('back_btn_on');
