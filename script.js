@@ -1,5 +1,5 @@
         //merhabalar :)
-        konsola_yaz("Debug", ' Denemeler: ' + 92);
+        konsola_yaz("Debug", ' Denemeler: ' + 93);
 
 $(window).on('load', function() { // makes sure the whole site is loaded 
   $('#status').fadeOut(); // will first fade out the loading animation 
@@ -32,8 +32,7 @@ $(window).on('load', function() { // makes sure the whole site is loaded
         });
         //----------------------
         $('.send_btn').click(function () {
-             var say=track_list.lenght-track_index;
-             console.log("Paylaşılan; " + "https://atesiask.netlify.app/?catid=9&trackid="+say);
+             console.log("Paylaşılan; " + "https://atesiask.netlify.app/?catid=9&trackid="+track_list.lenght-track_index);
         });
         //----------------------
         $('.back_btn').click(function () {
