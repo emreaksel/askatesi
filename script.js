@@ -1,5 +1,5 @@
         //merhabalar :)
-        konsola_yaz("Debug", ' Denemeler: ' + 77);
+        konsola_yaz("Debug", ' Denemeler: ' + 78);
 
         var track_index = 0;
         var isPlaying = false;
@@ -26,6 +26,10 @@
         //        //path: "https://www.mediafire.com/download/rjvwin4c/eyademoglu_keroglu.mp3"
         //    },
         //];
+        //----------------------
+        $('.back_btn').click(function () {
+                console.log("back button click");                           
+        });
         //----------------------
         curr_track.onended = function () {
                 nextTrack();
