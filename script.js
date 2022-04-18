@@ -1,10 +1,10 @@
         //merhabalar :)
-        konsola_yaz("Debug", ' Denemeler: ' + 83);
+        konsola_yaz("Debug", ' Denemeler: ' + 84);
 
 $(window).on('load', function() { // makes sure the whole site is loaded 
   $('#status').fadeOut(); // will first fade out the loading animation 
   $('#preloader').delay(500).fadeOut('slow'); // will fade out the white DIV that covers the website. 
-  checkTouchScreen();
+  //checkTouchScreen();
 });
 
         var track_index = 0;
@@ -22,16 +22,6 @@ $(window).on('load', function() { // makes sure the whole site is loaded
         var list_nukte = new Array();
         // parça listesi
         var track_list = new Array();
-        //var track_list = [
-        //    {
-        //        name: "Ey Ademoğlu",
-        //        artist: "K. Eroglu",
-        //        image: "http://kardelendergisi.com/atesiask/images/yeni257.jpg",
-        //        path: "https://www.mediafire.com/download/rjv71inh44win4c/eyademoglu_keroglu.mp3"
-        //        //https://www.mediafire.com/file/wame8e6p9gwuqu6/mededya
-        //        //path: "https://www.mediafire.com/download/rjvwin4c/eyademoglu_keroglu.mp3"
-        //    },
-        //];
         //----------------------
         $('.play_btn').click(function () {
              $('#play_circle').toggleClass('glyphicon-play').toggleClass('glyphicon-pause');   
@@ -91,7 +81,7 @@ $(window).on('load', function() { // makes sure the whole site is loaded
             else if (next_type == 2) {
                 //track index sabit kalır
             }
-            konsola_yaz("function nextTrack", ' Track Index: ' + track_index);
+            
             loadTrack(track_index);
             setNukte()
             playTrack();
@@ -106,6 +96,7 @@ $(window).on('load', function() { // makes sure the whole site is loaded
                 $(".track-artist").text(track_list[track_index].artist.replace(':', ''));
                 clearInterval(updateTimer);
                 updateTimer = setInterval(seekUpdate, 1000);
+                konsola_yaz("loadTrack", ' Track Index: ' + track_index);
         }
         //----------------------
         function seekTo() {
@@ -307,7 +298,6 @@ console.log("adresin yeri: " + window.location.href);
 //----------------------
 //==============================================================================================
 function listbutton(){
-        console.log("function back button click");
       $('.player_playlist').toggleClass('playlist_on');
       $('.glyphicon-menu-left').toggleClass('back_btn_on');
       $('.waves').toggleClass('waves_up');
