@@ -1,5 +1,5 @@
         //merhabalar :)
-        konsola_yaz("Debug", ' Denemeler: ' + 91);
+        konsola_yaz("Debug", ' Denemeler: ' + 92);
 
 $(window).on('load', function() { // makes sure the whole site is loaded 
   $('#status').fadeOut(); // will first fade out the loading animation 
@@ -32,8 +32,8 @@ $(window).on('load', function() { // makes sure the whole site is loaded
         });
         //----------------------
         $('.send_btn').click(function () {
-                var say=track_list.lenght-track_index;
-             konsola_yaz("Paylaşılan", "; " + "https://atesiask.netlify.app/?catid=9&trackid="+say);
+             var say=track_list.lenght-track_index;
+             console.log("Paylaşılan; " + "https://atesiask.netlify.app/?catid=9&trackid="+say);
         });
         //----------------------
         $('.back_btn').click(function () {
@@ -90,18 +90,18 @@ $(window).on('load', function() { // makes sure the whole site is loaded
         //----------------------
         function mixTrack() {
             //0 karışık, 1 sıra ile, 2 tekrarlı
-            $('.random_btn').removeClass();
+            //$('.random_btn').removeClass();
             if (next_type == 0) {
                 next_type = 1;
-                $('.random_btn').addClass('glyphicon glyphicon-sort-by-attributes-alt');
+                $('.random_btn').attr('class','glyphicon glyphicon-sort-by-attributes-alt');
             }
             else if (next_type == 1) {
                 next_type = 2;
-                $('.random_btn').addClass('glyphicon glyphicon-retweet');
+                $('.random_btn').attr('class','glyphicon glyphicon-retweet');
             }
             else if (next_type == 2) {
                 next_type = 0;
-                $('.random_btn').addClass('glyphicon glyphicon-random');
+                $('.random_btn').attr('class','glyphicon glyphicon-random');
             }
             konsola_yaz("function mixTrack", "next type=" + next_type);
         }
