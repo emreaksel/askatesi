@@ -1,5 +1,5 @@
         //merhabalar :)
-        konsola_yaz("Debug", ' Denemeler: ' + 84);
+        konsola_yaz("Debug", ' Denemeler: ' + 85);
 
 $(window).on('load', function() { // makes sure the whole site is loaded 
   $('#status').fadeOut(); // will first fade out the loading animation 
@@ -244,8 +244,7 @@ $(window).on('load', function() { // makes sure the whole site is loaded
               dataType: "xml",
               success: function(xml) {
                 if (!birkerecalisti) {
-                 console.log("liste parselleme başarılı");
-
+                 
                   $(xml).find('ul').find('li').each(function(){
                     
                   track_list.push({ name: $(this).attr("data-title"), artist: $(this).attr("data-duration"), image: "http://kardelendergisi.com/atesiask/images/yeni77.jpg", path: $(this).attr("data-path") });
@@ -275,8 +274,6 @@ $(window).on('load', function() { // makes sure the whole site is loaded
               dataType: "text",
               success: function(text) {
                       if (!birkerecalisti_nukte) {
-                               console.log("nukte parselleme başarılı");
-                                     //console.log("nukte: "+text);
                                 var lines = text.split("\n");
                               
                                 for (var i = 0, len = lines.length; i < len; i++) {
@@ -294,7 +291,7 @@ $(window).on('load', function() { // makes sure the whole site is loaded
               }
           });
 
-console.log("adresin yeri: " + window.location.href);
+konsola_yaz("adres", ': ' + window.location.href);
 //----------------------
 //==============================================================================================
 function listbutton(){
