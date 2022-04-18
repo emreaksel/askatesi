@@ -32,7 +32,7 @@ $(window).on('load', function() { // makes sure the whole site is loaded
         });
         //----------------------
         $('.send_btn').click(function () {
-             console.log("Paylaşılan; " + "https://atesiask.netlify.app/?catid=9&trackid="+track_list.lenght-track_index);
+             console.log("Paylaşılan; " + "https://atesiask.netlify.app/?catid=9&trackid="+track_index);
         });
         //----------------------
         $('.back_btn').click(function () {
