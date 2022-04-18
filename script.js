@@ -1,5 +1,5 @@
         //merhabalar :)
-        konsola_yaz("Debug", ' Denemeler: ' + 87);
+        konsola_yaz("Debug", ' Denemeler: ' + 88);
 
 $(window).on('load', function() { // makes sure the whole site is loaded 
   $('#status').fadeOut(); // will first fade out the loading animation 
@@ -32,7 +32,7 @@ $(window).on('load', function() { // makes sure the whole site is loaded
         });
         //----------------------
         $('.send_btn').click(function () {
-             konsola_yaz("Paylaşılan", "; " + "https://atesiask.netlify.app/?catid=9&trackid="+track_index);
+             konsola_yaz("Paylaşılan", "; " + "https://atesiask.netlify.app/?catid=9&trackid="+(track_list.lenght-track_index));
         });
         //----------------------
         $('.back_btn').click(function () {
@@ -88,14 +88,18 @@ $(window).on('load', function() { // makes sure the whole site is loaded
         }
         //----------------------
         function mixTrack() {
+            //0 karışık, 1 sıra ile, 2 tekrarlı
             if (next_type == 0) {
                 next_type = 1;
+                $('.random_btn').removeClass().addClass('glyphicon glyphicon-sort-by-attributes-alt');
             }
             else if (next_type == 1) {
                 next_type = 2;
+                $('.random_btn').removeClass().addClass('glyphicon glyphicon-retweet');
             }
             else if (next_type == 2) {
                 next_type = 0;
+                $('.random_btn').removeClass().addClass('glyphicon glyphicon-random');
             }
             konsola_yaz("function mixTrack", "next type=" + next_type);
         }
