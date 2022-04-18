@@ -1,5 +1,5 @@
         //merhabalar :)
-        konsola_yaz("Debug", ' Denemeler: ' + 85);
+        konsola_yaz("Debug", ' Denemeler: ' + 87);
 
 $(window).on('load', function() { // makes sure the whole site is loaded 
   $('#status').fadeOut(); // will first fade out the loading animation 
@@ -28,11 +28,11 @@ $(window).on('load', function() { // makes sure the whole site is loaded
         });
         //----------------------
         $('.random_btn').click(function () {
-             $('.random_btn').toggleClass('random_btn_on');   
+             mixTrack();
         });
         //----------------------
-        $('.repeat_btn').click(function () {
-             $('.repeat_btn').toggleClass('repeat_btn_on');  
+        $('.send_btn').click(function () {
+             konsola_yaz("Paylaşılan", "; " + "https://atesiask.netlify.app/?catid=9&trackid="+track_index);
         });
         //----------------------
         $('.back_btn').click(function () {
@@ -87,6 +87,18 @@ $(window).on('load', function() { // makes sure the whole site is loaded
             playTrack();
         }
         //----------------------
+        function mixTrack() {
+            if (next_type == 0) {
+                next_type = 1;
+            }
+            else if (next_type == 1) {
+                next_type = 2;
+            }
+            else if (next_type == 2) {
+                next_type = 0;
+            }
+            konsola_yaz("function mixTrack", "next type=" + next_type);
+        }
         //----------------------
         function loadTrack(track_index) {
             curr_track.src = track_list[track_index].path;
