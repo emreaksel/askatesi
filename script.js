@@ -1,5 +1,5 @@
         //merhabalar :)
-        konsola_yaz("Debug", ' Denemeler: ' + 79);
+        konsola_yaz("Debug", ' Denemeler: ' + 80);
 
         var track_index = 0;
         var isPlaying = false;
@@ -28,7 +28,8 @@
         //];
         //----------------------
         $('.back_btn').click(function () {
-                console.log("back button click");                           
+                console.log("back button click");
+                listbutton();
         });
         //----------------------
         curr_track.onended = function () {
