@@ -16,7 +16,7 @@ $(document).ready(function() {
 
   (function() {
     $('.back_btn').on('click', function() {
-      listbutton();
+      //listbutton();
     })
   })();
   
@@ -51,7 +51,7 @@ $(document).ready(function() {
 
     })
   })();
-
+/*
   function listbutton(){
       $('.player_playlist').toggleClass('playlist_on');
       $('.glyphicon-menu-left').toggleClass('back_btn_on');
@@ -67,7 +67,7 @@ $(document).ready(function() {
       $('.line_preload').toggleClass('line_preload_up');
   }
  
-  /*
+  
   // отменить выделение текста
   function preventSelection(element) {
     var preventSelection = false;
