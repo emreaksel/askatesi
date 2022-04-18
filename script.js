@@ -1,5 +1,5 @@
         //merhabalar :)
-        konsola_yaz("Debug", ' Denemeler: ' + 80);
+        konsola_yaz("Debug", ' Denemeler: ' + 81);
 
         var track_index = 0;
         var isPlaying = false;
@@ -281,6 +281,7 @@ console.log("adresin yeri: " + window.location.href);
 //----------------------
 //==============================================================================================
 function listbutton(){
+        console.log("function back button click");
       $('.player_playlist').toggleClass('playlist_on');
       $('.glyphicon-menu-left').toggleClass('back_btn_on');
       $('.waves').toggleClass('waves_up');
