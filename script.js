@@ -1,5 +1,5 @@
         //merhabalar :)
-        konsola_yaz("Debug", ' Denemeler: ' + 99);
+        konsola_yaz("Debug", ' Denemeler: ' + 100);
 
         $(window).on('load', function () { // makes sure the whole site is loaded
             $('#status').fadeOut(); // will first fade out the loading animation
@@ -65,6 +65,7 @@
             /* Copy the text inside the text field */
             navigator.clipboard.writeText(copyText.value);
             //alert("Paylaşım Bağlantısı Kopyalandı");
+            $('#label_share').show();
             $('#share').show();
         }
         //----------------------
