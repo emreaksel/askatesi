@@ -1,11 +1,12 @@
         //merhabalar :)
-        konsola_yaz("Debug", ' Denemeler: ' + 97);
+        konsola_yaz("Debug", ' Denemeler: ' + 98);
 
         $(window).on('load', function () { // makes sure the whole site is loaded
             $('#status').fadeOut(); // will first fade out the loading animation
             $('#preloader').delay(500).fadeOut('slow'); // will fade out the white DIV that covers the website.
             //checkTouchScreen();
         });
+$('#share').hide();
 
         var track_index = 0;
         var share_index = 0;
@@ -64,7 +65,8 @@
             copyText.setSelectionRange(0, 99999); /* For mobile devices */
             /* Copy the text inside the text field */
             navigator.clipboard.writeText(copyText.value);
-            alert("Paylaşım Bağlantısı Kopyalandı");
+            //alert("Paylaşım Bağlantısı Kopyalandı");
+            $('#share').show();
         }
         //----------------------
         function playpauseTrack() {
