@@ -1,12 +1,11 @@
         //merhabalar :)
-        konsola_yaz("Debug", ' Denemeler: ' + 98);
+        konsola_yaz("Debug", ' Denemeler: ' + 99);
 
         $(window).on('load', function () { // makes sure the whole site is loaded
             $('#status').fadeOut(); // will first fade out the loading animation
             $('#preloader').delay(500).fadeOut('slow'); // will fade out the white DIV that covers the website.
             //checkTouchScreen();
         });
-$('#share').hide();
 
         var track_index = 0;
         var share_index = 0;
