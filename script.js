@@ -1,5 +1,5 @@
         //merhabalar :)
-        konsola_yaz("Debug", ' Denemeler: ' + 100);
+        konsola_yaz("Debug", ' Denemeler: ' + 101);
 
         $(window).on('load', function () { // makes sure the whole site is loaded
             $('#status').fadeOut(); // will first fade out the loading animation
@@ -109,15 +109,15 @@
             //$('.random_btn').removeClass();
             if (next_type == 0) {
                 next_type = 1;
-                $('.random_btn').attr('class', 'glyphicon glyphicon-sort-by-attributes-alt');
+                $('.random_btn').innerHTML = '<span class="glyphicon glyphicon-sort-by-attributes-alt" aria-hidden="true"></span>';
             }
             else if (next_type == 1) {
                 next_type = 2;
-                $('.random_btn').attr('class', 'glyphicon glyphicon-retweet');
+                $('.random_btn').innerHTML = '<span class="glyphicon glyphicon-retweet" aria-hidden="true"></span>';
             }
             else if (next_type == 2) {
                 next_type = 0;
-                $('.random_btn').attr('class', 'glyphicon glyphicon-random');
+                $('.random_btn').innerHTML = '<span class="glyphicon glyphicon-random" aria-hidden="true"></span>';
             }
             konsola_yaz("function mixTrack", "next type=" + next_type);
         }
