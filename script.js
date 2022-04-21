@@ -1,5 +1,5 @@
         //merhabalar :)
-        konsola_yaz("Debug", ' Denemeler: ' + 104);
+        konsola_yaz("Debug", ' Denemeler: ' + 105);
 
         $(window).on('load', function () { // makes sure the whole site is loaded
             $('#status').fadeOut(); // will first fade out the loading animation
@@ -77,13 +77,13 @@
         function playTrack() {
             curr_track.play();
             isPlaying = true;
-            $('#play_circle').toggleClass('change_me glyphicon glyphicon-play');  
+            $('#play_circle').toggleClass('glyphicon-play').toggleClass('glyphicon-pause');  
         }
         //----------------------
         function pauseTrack() {
             curr_track.pause();
             isPlaying = false;
-            $('#play_circle').toggleClass('change_me glyphicon glyphicon-pause');
+            $('#play_circle').toggleClass('glyphicon-play').toggleClass('glyphicon-pause');
         }
         //----------------------
         function nextTrack() {
