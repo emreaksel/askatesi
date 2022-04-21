@@ -1,5 +1,5 @@
         //merhabalar :)
-        konsola_yaz("Debug", ' Denemeler: ' + 105);
+        konsola_yaz("Debug", ' Denemeler: ' + 106);
 
         $(window).on('load', function () { // makes sure the whole site is loaded
             $('#status').fadeOut(); // will first fade out the loading animation
@@ -55,6 +55,14 @@
         curr_track.onended = function () {
             nextTrack();
         };
+        curr_track.onplaying = function () {
+            $('.play_btn').html('<span class="glyphicon glyphicon-pause" id="play_circle" aria-hidden="true"></span>');
+            console.log("onplaying");
+        }
+        curr_track.onpause = function () {
+            $('.play_btn').html('<span class="glyphicon glyphicon-play" id="play_circle" aria-hidden="true"></span>');
+            console.log("onpause");
+        }
         //----------------------
         function Copy(text) {
             $('#share').val(text);
@@ -77,13 +85,11 @@
         function playTrack() {
             curr_track.play();
             isPlaying = true;
-            $('#play_circle').toggleClass('glyphicon-play').toggleClass('glyphicon-pause');  
         }
         //----------------------
         function pauseTrack() {
             curr_track.pause();
             isPlaying = false;
-            $('#play_circle').toggleClass('glyphicon-play').toggleClass('glyphicon-pause');
         }
         //----------------------
         function nextTrack() {
