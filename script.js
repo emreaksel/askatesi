@@ -63,6 +63,9 @@
             $('.play_btn').html('<span class="glyphicon glyphicon-play" id="play_circle" aria-hidden="true"></span>');
             console.log("onpause");
         }
+        curr_track.onloadeddata = function () {
+            console.log("load");
+        }
         //----------------------
         function Copy(text) {
             $('#share').val(text);
