@@ -64,18 +64,18 @@
       <title>Bir Menem</title>
       <description><![CDATA[ Menem bir  ]]></description>
       <pubDate>Sun, Apr 24 2022 21:07:44 +0300</pubDate>
-      <enclosure url='https://www.mediafire.com/file/t58hg7bevjsk5e0/menem.mp3' length='153' type='audio/mpeg'/>
+      <enclosure url='https://www.mediafire.com/file/t58hg7bevjsk5e0/menem.mp3' length='1900000' type='audio/mpeg'/>
       <itunes: author>Kuş Dili</itunes: author >
       <itunes: subtitle>Bir Menem</itunes: subtitle >
       <itunes:summary>< ![CDATA[Menem bir ]]></itunes: summary >
       <itunes: duration>153</itunes: duration >
       <itunes: explicit>clean</itunes: explicit >
-      <itunes: image href='http://kardelendergisi.com/atesiask/images/beyazkus.jpg' />
+      <itunes: image href='https://d3wo5wojvuv7l.cloudfront.net/t_rss_itunes_square_1400/images.spreaker.com/original/11aafb9dee1b651fbf9020079a534b82.jpg' />
       <itunes: season>undefined</itunes: season >
       <itunes: episodeType>full</itunes: episodeType >
       <googleplay: author>Kuş Dili</googleplay: author >
       <googleplay: description>Menem bir </googleplay: description >
-      <googleplay: image href='http://kardelendergisi.com/atesiask/images/beyazkus.jpg' />
+      <googleplay: image href='https://d3wo5wojvuv7l.cloudfront.net/t_rss_itunes_square_1400/images.spreaker.com/original/11aafb9dee1b651fbf9020079a534b82.jpg' />
       <googleplay: explicit>No</googleplay: explicit >
     </item>
 </channel>
