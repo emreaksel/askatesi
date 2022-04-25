@@ -109,7 +109,8 @@
             }
 
             loadTrack(track_index);
-            setNukte()
+            setNukte();
+            setImage();
             playTrack();
         }
         //----------------------
