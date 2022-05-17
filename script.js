@@ -1,12 +1,12 @@
         //merhabalar :)
-        konsola_yaz("Debug", ' Denemeler: ' + 106);
+        konsola_yaz("Debug", ' Denemeler: ' + 107);
 
         $(window).on('load', function () { // makes sure the whole site is loaded
             $('#status').fadeOut(); // will first fade out the loading animation
             $('#preloader').delay(500).fadeOut('slow'); // will fade out the white DIV that covers the website.
             //checkTouchScreen();
         });
-
+        var listen_index = 0;
         var track_index = 0;
         var share_index = 0;
         var isPlaying = false;
@@ -23,6 +23,8 @@
         var list_nukte = new Array();
         // parça listesi
         var track_list = new Array();
+        // dinlenmiş parça listesi
+        var track_list_before = new Array();
         //----------------------
         $('.play_btn').click(function () {
             //$('#play_circle').toggleClass('glyphicon-play').toggleClass('glyphicon-pause');
@@ -95,6 +97,14 @@
             isPlaying = false;
         }
         //----------------------
+        function prevTrack() {
+            listen_index--;
+            loadTrack(track_list_before[listen_index]);
+            setNukte();
+            setImage();
+            playTrack();
+        }
+        //----------------------
         function nextTrack() {
             if (next_type == 0) { //karışık
                 track_index = Math.floor(Math.random() * track_list.length);
@@ -133,8 +143,10 @@
         }
         //----------------------
         function loadTrack(track_indexxx) {
+                listen_index++;
             curr_track.src = track_list[track_indexxx].path;
             curr_track.load();
+            track_list_before.push(track_indexxx);
             track_index = track_indexxx;
             konsola_yaz("loadTrack", ' Track Index: ' + track_index);
             $(".track-name").text(track_list[track_indexxx].name);
