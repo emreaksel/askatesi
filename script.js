@@ -24,7 +24,7 @@
         // parça listesi
         var track_list = new Array();
         // dinlenmiş parça listesi
-        var track_list_before = new Array();
+        var track_list_before = new Array(); //önceki parça için bir sayı tutuyor
         //----------------------
         $('.play_btn').click(function () {
             //$('#play_circle').toggleClass('glyphicon-play').toggleClass('glyphicon-pause');
@@ -101,7 +101,7 @@
            if (listen_index > 0) { 
                     curr_track.pause();
                     listen_index--;
-                    loadTrack(track_list_before[listen_index]);
+                    loadTrack(track_list_before[listen_index-1]);
                     setNukte();
                     setImage();
                     playTrack();
@@ -120,7 +120,7 @@
             else if (next_type == 2) {
                 //track index sabit kalır
             }
-
+            listen_index++;
             loadTrack(track_index);
             setNukte();
             setImage();
@@ -146,7 +146,7 @@
         }
         //----------------------
         function loadTrack(track_indexxx) {
-                listen_index++;
+                
             curr_track.src = track_list[track_indexxx].path;
             curr_track.load();
             track_list_before.push(track_indexxx);
@@ -271,6 +271,7 @@
                 loadTrack(track_index);
                 //console.log("ilk parça: " + track_list[track_index].name);
             }
+                listen_index++;
 
         }
         //----------------------
