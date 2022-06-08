@@ -301,6 +301,8 @@
                         track_list.push({ name: $(this).attr("data-title"), artist: $(this).attr("data-duration"), image: "http://kardelendergisi.com/atesiask/images/yeni77.jpg", path: $(this).attr("data-path") });
 
                     })
+track_list.push({ name: "ea", artist: "ea", path: "https://github.com/emreaksel/ad/raw/master/10%20-%20Kanun%20Taksim.mp3" });
+
 
                     track_list = track_list.reverse();
                     setListview()
